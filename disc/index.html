@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+   
+.mauticform-input{
+  width: 100%;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-image:url(./DISC.jpg);
+  background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+background-color: #010B46;
+}
+input[type = checkbox] {
+           
+            padding: 10px 15px;
+            margin: 5px 0;
+            box-sizing: border-box;
+         }
+#mauticform_tracnghiemdisc {
+  background-color: #ffffff;
+  background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+  background-repeat: no-repeat;
+  background-image:url(./logo_colorful.png);
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  border-radius: 2.5em;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #F37821;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  border-radius: 1em;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #e5b53b;
+}
+</style>
+<body>
+  <img src="./logo.png" style="margin-left: auto;margin-right: auto; width: 15%;display: block;"> 
+  <form id="mauticform_tracnghiemdisc" autocomplete="false" action="https://happyclick.vn/form/submit?formId=88" method="post"  data-mautic-form="tracnghiemdisc" enctype="multipart/form-data">
+   
+    <h1 style="color:#F37821;font-size: xx-large;" >KHẢO SÁT THEO MÔ HÌNH D.I.S.C</h1>
+    <p style="text-align: center;"><i>Trong mỗi hàng ngang, chọn và đánh số (X)  một trong 4 từ hàng ngang, mô tả đúng nhất tính cách của bạn khi làm việc.</i></p>
+    <hr>
+  <!-- One "tab" for each step in the form: -->
+    
+  <div class="tab">
+    <table class="center">
+        <td>  
+              <input id="item1" name="" type="checkbox" /> &nbsp;Táo bạo  <br><br>
+            <input id="item2" name="" type="checkbox" /> &nbsp; Kiên quyết<br><br>
+            <input id="item3" name="" type="checkbox" />&nbsp; Trực tính<br><br>
+            <input id="item4" name="" type="checkbox" /> &nbsp; Dứt khoát<br><br>
+            <input id="item5" name="" type="checkbox" /> &nbsp; Liều lĩnh<br><br>
+            <input id="item6" name="" type="checkbox" /> &nbsp; Sáng tạo<br><br>
+            <input id="item7" name="" type="checkbox" /> &nbsp; Chỉ huy<br><br>
+            <input id="item8" name="" type="checkbox" /> &nbsp; Nóng vội<br><br>
+            <input id="item9" name="" type="checkbox" /> &nbsp; Khăng khăng<br><br>
+            <input id="item10" name="" type="checkbox" /> &nbsp;Dũng cảm<br><br>
+            <input id="item11" name="" type="checkbox" />&nbsp; Ý chí mạnh mẽ<br><br>
+            <input id="item12" name="" type="checkbox" />&nbsp; Độc lập<br><br>
+            <input id="item13" name="" type="checkbox" /> &nbsp;Cạnh tranh<br><br>
+            <input id="item14" name="" type="checkbox" /> &nbsp;Vững vàng<br><br>
+            <input id="item15" name="" type="checkbox" /> &nbsp;Ngoan cố<br><br>
+            <input id="item16" name="" type="checkbox" /> &nbsp;Trơ tráo<br><br>
+            <input id="item17" name="" type="checkbox" />&nbsp; Tự tin<br><br>
+            <input id="item18" name="" type="checkbox" /> &nbsp;Hăm hở<br><br>
+            <input id="item19" name="" type="checkbox" />&nbsp; Năng nổ<br><br>
+            <input id="item20" name="" type="checkbox" /> &nbsp;Quyết đoán<br><br>
+            <input id="item21" name="" type="checkbox" />&nbsp;Cố chấp<br><br>
+            <input id="item22" name="" type="checkbox" />&nbsp;Mạnh mẽ<br><br>
+            <input id="item23" name="" type="checkbox" />&nbsp;Cường tráng<br><br>
+            <input id="item24" name="" type="checkbox" />&nbsp;Đòi hỏi<br><br>
+            <input id="item25" name="" type="checkbox" />&nbsp;Thích tranh cãi<br><br>
+            <input id="item26" name="" type="checkbox" />&nbsp;Thẳng thắn<br><br>
+            <input id="item27" name="" type="checkbox" />&nbsp;Bồn chồn<br><br>
+            <input id="item28" name="" type="checkbox" />&nbsp;Tiên phong<br><br>
+        </td>
+        <td>
+            <input id="item29" name="" type="checkbox" />&nbsp;Nhiệt tình<br><br>
+            <input id="item30" name="" type="checkbox" />&nbsp;Có sức thuyết phục<br><br>
+            <input id="item31" name="" type="checkbox" />&nbsp;Thân thiện<br><br>
+            <input id="item32" name="" type="checkbox" />&nbsp;Ba hoa<br><br>
+            <input id="item33" name="" type="checkbox" />&nbsp;Thân mật,thoải mái<br><br>
+            <input id="item34" name="" type="checkbox" />&nbsp;Có tài thuyết phục<br><br>
+            <input id="item35" name="" type="checkbox" />&nbsp;Diễn cảm<br><br>
+            <input id="item36" name="" type="checkbox" />&nbsp;Thanh lịch<br><br>
+            <input id="item37" name="" type="checkbox" />&nbsp;Có sức hấp dẫn mạnh<br><br>
+            <input id="item38" name="" type="checkbox" />&nbsp;Truyền cảm hứng<br><br>
+            <input id="item39" name="" type="checkbox" />&nbsp;Tươi cười<br><br>
+            <input id="item40" name="" type="checkbox" />&nbsp;Khuyến khích<br><br>
+            <input id="item41" name="" type="checkbox" />&nbsp;Hân hoan<br><br>
+            <input id="item42" name="" type="checkbox" />&nbsp;Hay khôi hài<br><br>
+            <input id="item43" name="" type="checkbox" />&nbsp;Thu hút<br><br>
+            <input id="item44" name="" type="checkbox" />&nbsp;Duyên dáng<br><br>
+            <input id="item45" name="" type="checkbox" />&nbsp;Thích kết bạn<br><br>
+            <input id="item46" name="" type="checkbox" />&nbsp;Rất linh hoạt<br><br>
+            <input id="item47" name="" type="checkbox" />&nbsp;Cởi mở<br><br>
+            <input id="item48" name="" type="checkbox" />&nbsp;Tự tin<br><br>
+            <input id="item49" name="" type="checkbox" />&nbsp;Sôi nổi<br><br>
+            <input id="item50" name="" type="checkbox" />&nbsp;Bốc đồng<br><br>
+            <input id="item51" name="" type="checkbox" />&nbsp;Giao thiệp giỏi<br><br>
+            <input id="item52" name="" type="checkbox" />&nbsp;Quyến rũ<br><br>
+            <input id="item53" name="" type="checkbox" />&nbsp;Vô tư lự<br><br>
+            <input id="item54" name="" type="checkbox" />&nbsp;Vui tính<br><br>
+            <input id="item55" name="" type="checkbox" />&nbsp;Lôi cuốn<br><br>
+            <input id="item56" name="" type="checkbox" />&nbsp;Lạc quan<br><br>
+        </td>
+        <td>        
+            <input id="item57" name="" type="checkbox" />&nbsp;Thỏa mãn<br><br>
+            <input id="item58" name="" type="checkbox" />&nbsp;Bản chất tốt<br><br>
+            <input id="item59" name="" type="checkbox" />&nbsp;Điềm tĩnh<br><br>
+            <input id="item60" name="" type="checkbox" />&nbsp;Theo tập quán<br><br>
+            <input id="item61" name="" type="checkbox" />&nbsp;Không cực đoan<br><br>
+            <input id="item62" name="" type="checkbox" />&nbsp;Hòa nhã<br><br>
+            <input id="item63" name="" type="checkbox" />&nbsp;Dễ phản ứng lại<br><br>
+            <input id="item64" name="" type="checkbox" />&nbsp;Khiêm tốn<br><br>
+            <input id="item65" name="" type="checkbox" />&nbsp;Sẵn sàng đồng ý<br><br>
+            <input id="item66" name="" type="checkbox" />&nbsp;Dễ phục tùng<br><br>
+            <input id="item67" name="" type="checkbox" />&nbsp;Sốt sắng<br><br>
+            <input id="item68" name="" type="checkbox" />&nbsp;Tử tế<br><br>
+            <input id="item69" name="" type="checkbox" />&nbsp;Chu đáo<br><br>
+            <input id="item70" name="" type="checkbox" />&nbsp;Tử tế<br><br>
+            <input id="item71" name="" type="checkbox" />&nbsp;Sốt sắng<br><br>
+            <input id="item72" name="" type="checkbox" />&nbsp;Biết nghe lời<br><br>
+            <input id="item73" name="" type="checkbox" />&nbsp;Có thể dự đoán<br><br>
+            <input id="item74" name="" type="checkbox" />&nbsp;Trung thành <br><br>
+            <input id="item75" name="" type="checkbox" />&nbsp;Nhẫn nại<br><br>
+            <input id="item76" name="" type="checkbox" />&nbsp;Hay giúp đỡ<br><br>
+            <input id="item77" name="" type="checkbox" />&nbsp;Hòa nhã<br><br>
+            <input id="item78" name="" type="checkbox" />&nbsp;Thông cảm<br><br>
+            <input id="item79" name="" type="checkbox" />&nbsp;Rộng lượng<br><br>
+            <input id="item80" name="" type="checkbox" />&nbsp;Ung dung<br><br>
+            <input id="item81" name="" type="checkbox" />&nbsp;Nhân hậu<br><br>
+            <input id="item82" name="" type="checkbox" />&nbsp;Thỏa mãn<br><br>
+            <input id="item83" name="" type="checkbox" />&nbsp;Sẵn sàng công tác<br><br>
+            <input id="item84" name="" type="checkbox" />&nbsp;Điềm đạm<br><br>
+        </td>
+        <td>
+            <input id="item85" name="" type="checkbox" />&nbsp;Ngoại giao<br><br>
+            <input id="item86" name="" type="checkbox" />&nbsp;Cẩn trọng<br><br>
+            <input id="item87" name="" type="checkbox" />&nbsp;Chính xác<br><br>
+            <input id="item88" name="" type="checkbox" />&nbsp;Dè dặt<br><br>
+            <input id="item89" name="" type="checkbox" />&nbsp;Sâu sắc<br><br>
+            <input id="item90" name="" type="checkbox" />&nbsp;Nhún nhường<br><br>
+            <input id="item91" name="" type="checkbox" />&nbsp;Cẩn thận<br><br>
+            <input id="item92" name="" type="checkbox" />&nbsp;Tinh ý<br><br>
+            <input id="item93" name="" type="checkbox" />&nbsp;Khéo xử<br><br>
+            <input id="item94" name="" type="checkbox" />&nbsp;Nhút nhát<br><br>
+            <input id="item95" name="" type="checkbox" />&nbsp;Kín đáo<br><br>
+            <input id="item96" name="" type="checkbox" />&nbsp;Nhận thức được<br><br>
+            <input id="item97" name="" type="checkbox" />&nbsp;Cách biệt riêng tư<br><br>
+            <input id="item98" name="" type="checkbox" />&nbsp;Hay quan trọng hóa<br><br>
+            <input id="item99" name="" type="checkbox" />&nbsp;Chín chắn<br><br>
+            <input id="item100" name="" type="checkbox" />&nbsp;Hợp lý<br><br>
+            <input id="item101" name="" type="checkbox" />&nbsp;Nói nhẹ nhàng<br><br>
+            <input id="item102" name="" type="checkbox" />&nbsp;Kỹ lưỡng<br><br>
+            <input id="item103" name="" type="checkbox" />&nbsp;Sợ hãi<br><br>
+            <input id="item104" name="" type="checkbox" />&nbsp;Công bằng<br><br>
+            <input id="item105" name="" type="checkbox" />&nbsp;Có kỷ luật<br><br>
+            <input id="item106" name="" type="checkbox" />&nbsp;Hướng vào nội tâm<br><br>
+            <input id="item107" name="" type="checkbox" />&nbsp;Tế nhị<br><br>
+            <input id="item108" name="" type="checkbox" />&nbsp;Phục tùng mệnh lệnh<br><br>
+            <input id="item109" name="" type="checkbox" />&nbsp;Có hệ thống<br><br>
+            <input id="item110" name="" type="checkbox" />&nbsp;Nghiêm ngặt<br><br>
+            <input id="item111" name="" type="checkbox" />&nbsp;Cẩn thận<br><br>
+            <input id="item112" name="" type="checkbox" />&nbsp;Tôn trọng<br><br>
+        </td>
+        
+    </table>
+
+      
+
+  
+  </div>
+ 
+  <div class="tab">
+    <h1>B. BẢNG KẾT QUẢ </h1>
+      <table class="result_table" border="1" style="text-align: center; width:100%;margin-left: auto;margin-right: auto;">
+      <tbody>
+      <tr style="background-color:#F37821; color:white">
+      <td>DOMINANCE</td>
+      <td>INFLUENCE</td>
+      <td>STEADINESS</td>
+      <td>CONSCIENTIOUSNESS</td>
+      </tr>
+      <tr>
+      <td>
+      <div id="DOMINANCE" style="color: orange; text-align: center; font-size: 3cm;"></div></td>
+      <td>
+      <div id="INFLUENCE" style="color: blue; text-align: center; font-size: 3cm;"></div></td>
+      <td>
+      <div id="STEADINESS" style="color: red; text-align: center; font-size: 3cm;"></div></td>
+      <td>
+      <div id="CONSCIENTIOUSNESS" style="color: aquamarine; text-align: center; font-size: 3cm;"></div></td>
+      </tr>
+      </tbody>
+      
+        <div class="mauticform-error" id="mauticform_tracnghiemdisc_error"></div>
+        <div class="mauticform-message" id="mauticform_tracnghiemdisc_message"></div>
+        <div class="mauticform-innerform">
+
+            
+          
+       
+
+        <input type="hidden" name="mauticform[formId]" id="mauticform_tracnghiemdisc_id" value="87">
+        <input type="hidden" name="mauticform[return]" id="mauticform_tracnghiemdisc_return" value="">
+        <input type="hidden" name="mauticform[formName]" id="mauticform_tracnghiemdisc_name" value="tracnghiemdisc">
+      </tfoot>
+      </table>
+      <h1 style="color:#010A37">Bạn Vui Lòng Để Lại Thông Tin Để Nhận Được Tư Vấn Kết Quả Nhé.</h1>
+      <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1" style=" display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;width: 100%;">
+
+        <div id="mauticform_tracnghiemdisc_ho_ten" data-validate="ho_ten" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required">
+            <label id="mauticform_label_tracnghiemdisc_ho_ten" for="mauticform_input_tracnghiemdisc_ho_ten" class="mauticform-label">Họ tên</label>
+            <input id="mauticform_input_tracnghiemdisc_ho_ten  " name="mauticform[ho_ten]" value="" class="mauticform-input" type="text">
+            <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+        </div>
+
+        <div id="mauticform_tracnghiemdisc_email" data-validate="email" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-2 mauticform-required fullwidth">
+            <label id="mauticform_label_tracnghiemdisc_email" for="mauticform_input_tracnghiemdisc_email" class="mauticform-label">Email</label>
+            <input id="mauticform_input_tracnghiemdisc_email" name="mauticform[email]" value="" class="mauticform-input" type="email">
+            <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+        </div>
+
+            <input id="mauticform_input_tracnghiemdisc_circle" name="mauticform[circle]" value="" class="mauticform-hidden" type="hidden">
+            <input id="mauticform_input_tracnghiemdisc_square" name="mauticform[square]" value="" class="mauticform-hidden" type="hidden">
+            <input id="mauticform_input_tracnghiemdisc_triangle" name="mauticform[triangle]" value="" class="mauticform-hidden" type="hidden">
+            <input id="mauticform_input_tracnghiemdisc_thunder" name="mauticform[thunder]" value="" class="mauticform-hidden" type="hidden">
+        <div id="mauticform_tracnghiemdisc_so_dien_thoai" class="mauticform-row mauticform-tel mauticform-field-7 fullwidth">
+            <label id="mauticform_label_tracnghiemdisc_so_dien_thoai" for="mauticform_input_tracnghiemdisc_so_dien_thoai" class="mauticform-label">Số Điện Thoại</label>
+            <input id="mauticform_input_tracnghiemdisc_so_dien_thoai" name="mauticform[so_dien_thoai]" value="" class="mauticform-input" type="tel">
+            <span class="mauticform-errormsg" style="display: none;"></span>
+        </div>
+
+        <div id="mauticform_tracnghiemdisc_ten_cong_ty" class="mauticform-row mauticform-text mauticform-field-8 fullwidth">
+            <label id="mauticform_label_tracnghiemdisc_ten_cong_ty" for="mauticform_input_tracnghiemdisc_ten_cong_ty" class="mauticform-label">Tên Công Ty</label>
+            <input id="mauticform_input_tracnghiemdisc_ten_cong_ty" name="mauticform[ten_cong_ty]" value="" class="mauticform-input" type="text">
+            <span class="mauticform-errormsg" style="display: none;"></span>
+        </div>
+        <br>
+        <div id="mauticform_tracnghiemdisc_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-9 fullwidth">
+            <button type="submit" name="mauticform[submit]" id="mauticform_input_tracnghiemdisc_submit" value="" class="mauticform-button btn btn-default">Kết Thúc</button>
+        </div>
+        </div>
+  </div>
+  <input type="hidden" name="mauticform[formId]" id="mauticform_tracnghiemdisc_id" value="88">
+  <input type="hidden" name="mauticform[return]" id="mauticform_tracnghiemdisc_return" value="">
+  <input type="hidden" name="mauticform[formName]" id="mauticform_tracnghiemdisc_name" value="tracnghiemdisc">
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Trở Về</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)"> Tiếp Tục</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    
+  </div>
+  
+</form>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").style.display = "none";;
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Tiếp Tục";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("mauticform_tracnghiemdisc").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+<script>
+      
+      
+      
+  var countChecked = function() {
+     
+    var n = $("input#item1:checked,input#item2:checked,input#item3:checked,input#item4:checked,input#item5:checked,input#item6:checked,input#item7:checked,input#item8:checked,input#item9:checked,input#item10:checked,input#item11:checked,input#item12:checked,input#item13:checked,input#item14:checked,input#item15:checked,input#item16:checked,input#item17:checked,input#item18:checked,input#item19:checked,input#item20:checked,input#item21:checked,input#item22:checked,input#item23:checked,input#item24:checked,input#item25:checked,input#item26:checked,input#item27:checked,input#item28:checked" ).length;
+    var n1 = $("input#item29:checked,input#item30:checked,input#item31:checked,input#item32:checked,input#item33:checked,input#item34:checked,input#item35:checked,input#item36:checked,input#item37:checked,input#item38:checked,input#item39:checked,input#item40:checked,input#item41:checked,input#item42:checked,input#item43:checked,input#item44:checked,input#item45:checked,input#item46:checked,input#item47:checked,input#item48:checked,input#item49:checked,input#item50:checked,input#item51:checked,input#item52:checked,input#item53:checked,input#item54:checked,input#item55:checked,input#item56:checked" ).length;
+    var n2 = $("input#item57:checked,input#item58:checked,input#item59:checked,input#item60:checked,input#item61:checked,input#item62:checked,input#item63:checked,input#item64:checked,input#item65:checked,input#item66:checked,input#item67:checked,input#item68:checked,input#item69:checked,input#item70:checked,input#item71:checked,input#item72:checked,input#item73:checked,input#item74:checked,input#item75:checked,input#item76:checked,input#item77:checked,input#item78:checked,input#item79:checked,input#item80:checked,input#item81:checked,input#item82:checked,input#item83:checked,input#item84:checked" ).length;
+    var n3 = $("input#item85:checked,input#item86:checked,input#item87:checked,input#item88:checked,input#item89:checked,input#item90:checked,input#item91:checked,input#item92:checked,input#item93:checked,input#item94:checked,input#item95:checked,input#item96:checked,input#item97:checked,input#item98:checked,input#item99:checked,input#item100:checked,input#item101:checked,input#item102:checked,input#item103:checked,input#item104:checked,input#item105:checked,input#item106:checked,input#item107:checked,input#item108:checked,input#item109:checked,input#item110:checked,input#item111:checked,input#item112:checked" ).length;
+  
+  $( "#DOMINANCE" ).text( n );
+  $( "#INFLUENCE" ).text( n1  );
+  $( "#STEADINESS" ).text( n2  );
+  $( "#CONSCIENTIOUSNESS" ).text( n3 );
+  document.getElementById("mauticform_input_tracnghiemdisc_circle").value=n1; 
+  document.getElementById("mauticform_input_tracnghiemdisc_square").value=n1; 
+  document.getElementById("mauticform_input_tracnghiemdisc_triangle").value=n2; 
+  document.getElementById("mauticform_input_tracnghiemdisc_thunder").value=n3; 
+
+  };
+  countChecked();
+
+$( "input[type=checkbox]" ).on( "click", countChecked );
+
+
+</script>
+<script type="text/javascript">
+  /** This section is only needed once per page if manually copying **/
+  if (typeof MauticSDKLoaded == 'undefined') {
+      var MauticSDKLoaded = true;
+      var head            = document.getElementsByTagName('head')[0];
+      var script          = document.createElement('script');
+      script.type         = 'text/javascript';
+      script.src          = 'https://happyclick.vn/media/js/mautic-form.js';
+      script.onload       = function() {
+          MauticSDK.onLoad();
+      };
+      head.appendChild(script);
+      var MauticDomain = 'https://happyclick.vn';
+      var MauticLang   = {
+          'submittingMessage': "Please wait..."
+      }
+  }else if (typeof MauticSDK != 'undefined') {
+      MauticSDK.onLoad();
+  }
+</script>
+
+
+</body>
+</html>

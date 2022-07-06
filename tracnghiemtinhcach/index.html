@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Trắc Nghiệm Tính Cách</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<style>
+
+
+@media only screen and (max-width: 600px) {
+	#msform {
+		width: 100%;
+		margin: 50px auto;
+		text-align: center;
+		position: relative;
+	}
+	
+  }
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+p h1 h2 h3 {
+	text-indent: 100px;
+  }
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo*/
+	background: 
+		linear-gradient(#000936, #000936);
+		height:auto;
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+	width: 1200px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	border-radius: 2.5em;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #ff7200;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 15px 10px;
+	margin: 10px 5px;
+	border-radius: 1em;
+	margin-top: 25px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #efaa65;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	height:max-content;
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 15px;
+	width: 20%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #ff7200;
+	color: white;
+}
+/* 
+-------------------------------------------- */
+/* hide item */
+
+.none{
+    display: none;
+}
+        /* Mobile */
+@media (hover: hover) { 
+  circle:hover {
+    color: grey;  
+    font-size: 100px;
+  }
+}
+       /* Desktop */
+  
+        
+        table {
+  width: 100%;
+  
+  
+}
+    table, th, td {
+  border: 2px solid;
+  cursor: pointer;
+  
+}
+td {
+  text-align: center;
+}
+.center {
+   
+  margin-left: auto;
+  margin-right: auto;
+}
+    /* Circle Section */
+        .circle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(circle.svg) no-repeat center;
+            mask: url(logo.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .circle:hover,.circle:focus,.circle:active {
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: green;
+            -webkit-mask: url(circle.svg) no-repeat center;
+            mask: url(circle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #circle.green,#circle1.green,#circle2.green,#circle3.green,#circle4.green,#circle5.green,#circle6.green,#circle7.green,#circle8.green,#circle9.green,#circle10.green,#circle11.green,#circle12.green,#circle13.green,#circle14.green,#circle15.green,#circle16.green,#circle17.green{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: green;
+            -webkit-mask: url(circle.svg) no-repeat center;
+            mask: url(circle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+       
+ 
+       /* Square v2 */
+       .square{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(square.svg) no-repeat center;
+            mask: url(logo.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .square:hover,.square:focus,.square:active {
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: skyblue;
+            -webkit-mask: url(square.svg) no-repeat center;
+            mask: url(square.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #square.blue,#square1.blue,#square2.blue,#square3.blue,#square4.blue,#square5.blue,#square6.blue,#square7.blue,#square8.blue,#square9.blue,#square10.blue,#square11.blue,#square12.blue,#square13.blue,#square14.blue,#square15.blue,#square16.blue,#square17.blue{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: skyblue;
+            -webkit-mask: url(square.svg) no-repeat center;
+            mask: url(square.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+
+
+    /* Triangle Section     */
+        .triangle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(logo.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .triangle:hover,.triangle:focus,.triangle:active {
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: red;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(triangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #triangle.red,#triangle1.red,#triangle2.red,#triangle3.red,#triangle4.red,#triangle5.red,#triangle6.red,#triangle7.red,#triangle8.red,#triangle9.red,#triangle10.red,#triangle11.red,#triangle12.red,#triangle13.red,#triangle14.red,#triangle15.red,#triangle16.red,#triangle17.red{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: red;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(triangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+      /* Thunder Section */
+      .thunder{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+             display: inline-block;
+      }
+      .thunder:hover{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: yellow;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      #thunder.yellow,#thunder1.yellow,#thunder2.yellow,#thunder3.yellow,#thunder4.yellow,#thunder5.yellow,#thunder6.yellow,#thunder7.yellow,#thunder8.yellow,#thunder9.yellow,#thunder10.yellow,#thunder11.yellow,#thunder12.yellow,#thunder13.yellow,#thunder14.yellow,#thunder15.yellow,#thunder16.yellow,#thunder17.yellow{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: yellow;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      /* Rectangle Section */
+      .rectangle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+             display: inline-block;
+      }
+      .rectangle:hover{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: purple;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      #rectangle.purple,#rectangle1.purple,#rectangle2.purple,#rectangle3.purple,#rectangle4.purple,#rectangle5.purple,#rectangle6.purple,#rectangle7.purple,#rectangle8.purple,#rectangle9.purple,#rectangle10.purple,#rectangle11.purple,#rectangle12.purple,#rectangle13.purple,#rectangle14.purple,#rectangle15.purple,#rectangle16.purple,#rectangle17.purple{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: purple;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- multistep form -->
+<form autocomplete="false" role="form" method="post" action="https://happyclick.vn/form/submit?formId=86" id="msform" data-mautic-form="tracnghiemtinhcach" enctype="multipart/form-data">
+    <img src="./logo.png" class="center" style="margin-left: auto;margin-right: auto; width: 10%;"> <br><br><br>
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Bắt Đầu</li>
+    <li>Phần A</li>
+    <li>Phần B</li>
+    <li>Phần C</li>
+    <li>Kết Thúc</li>
+   
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <br><h1 style="text-align: center; font-size: 30px; color: rgb(4, 4, 116);font-weight: bold;">TÂM LÝ HÌNH HỌC HƯỚNG DẪN LÀM BÀI TRẮC NGHIỆM</h1><br><hr><br>
+    <h1>CHỌN CÁC MÔ TẢ VỀ BẠN RÕ NÉT NHẤT</h1><br>
+    <p>1. Đây là trắc nghiệm đơn giản và thú vị. Bạn chỉ cần chọn các câu hay cụm từ mô tả về bạn rõ nét nhất bằng cách đánh dấu vào câu đó.</p><br>
+    <p>2. Trong mỗi phần, bạn chọn <span style="color: red;"><b>7</b></span> câu hay cụm từ đúng với bạn nhất.</p>  <br>
+   <img src="./A.svg" width="20%">
+    <img src="./B.svg" width="20%">
+    <img src="./C.svg" width="20%">
+
+    
+    <p style="color: red;"><b>Lưu ý:</b></p><br>
+    <p>
+        Vui lòng chọn những câu hay cụm từ miêu tả về mình chứ không phải hình tượng mà mình mong muốn trở thành.
+        </p>
+
+    <input type="button" name="next" class="next action-button" value="Bắt Đầu" />
+  </fieldset>
+  <fieldset>
+     
+    <h1 class="fs-title" style="color:#ff7200; font-size: large; font-weight: bold;">A.CÁC NÉT TÍNH CÁCH CỦA BẠN</h1>
+    <h3 class="fs-subtitle">Chọn <span style="color: red;"> 7</span> hình gần đúng với tính cách của bạn</h3>
+           
+               
+    <table id="partA" class="center">
+      <tr>
+          <td><div id="triangle" class="triangle" ></div>
+              <p>Thích lãnh đạo</p>
+          </td>
+          <td><div id="triangle1" class="triangle" ></div>
+              <p>Có tham vọng</p>
+          </td>
+          <td><i class="circle" id="circle"  ></i><br>
+              <p>Dễ cảm thông, quan tâm đến người khác</p>            
+          </td>
+          <td><i class="square" id="square" ></i>
+              <p>Chi tiết, để ý từng li từng tí</p>
+          </td>
+          <td><i class="square" id="square1"  ></i>
+              <p>Cổ điển, truyền thống</p>
+          </td>
+      </tr>
+      <tr>
+          <td><div id="thunder" class="thunder" ></div>
+              <p>Sáng tạo, đổi mới</p>
+          </td>
+          <td><i class="square" id="square2"  ></i>
+              <p>Tỉ mỉ, có tổ chức</p>
+          </td>
+          <td><div id="thunder1" class="thunder" ></div>
+              <p>Khác thường, lập dị</p>
+          </td>
+          <td><i class="circle" id="circle1"  ></i><br>
+              <p>“Sứ giả hòa bình” kết nối mọi người</p>            
+          </td>
+          <td><div id="thunder2" class="thunder" ></div>
+              <p>Không thích bị ràng buộc trong khuôn khổ</p>
+          </td>
+      </tr>
+      <tr>
+          <td><i class="square" id="square3"  ></i>
+              <p>Tuân thủ nguyên tắc, nội quy</p>
+          </td>
+          <td><i class="circle" id="circle2"  ></i><br>
+              <p>Đa cảm</p>            
+          </td>
+          <td><div id="rectangle" class="rectangle" ></div>
+              <p>Hay quên</p>
+          </td>
+          <td><div id="rectangle1" class="rectangle" ></div>
+              <p>Dễ bị người khác ảnh hưởng</p>
+          </td>
+          <td><i class="circle" id="circle3"  ></i><br>
+              <p>Hay giúp đỡ người khác</p>            
+          </td>
+      </tr>
+      <tr>
+          <td><div id="triangle2" class="triangle" ></div>
+              <p>Thích cạnh tranh, thi đua</p>
+          </td>
+          <td><div id="rectangle2" class="rectangle" ></div>
+              <p>Đang trong giai đoạn có nhiều thay đổi</p>
+          </td>
+          <td><div id="triangle3" class="triangle" ></div>
+              <p>Thích mạo hiểm</p>
+          </td>
+          <td><div id="thunder3" class="thunder" ></div>
+              <p>Không ngại bộc lộ cảm xúc, suy nghĩ thật của mình</p>
+          </td>
+          <td><div id="rectangle3" class="rectangle" ></div>
+              <p>Hay cảm thấy bối rối, lúng túng trong cuộc sống</p>
+          </td>
+      </tr>
+      <tr>
+          <td><i class="circle" id="circle4"  ></i><br>
+              <p>Người của mọi người</p>            
+          </td>
+          <td><div id="thunder4" class="thunder" ></div>
+              <p>Bốc đồng</p>
+          </td>
+          <td><i class="square" id="square4"  ></i>
+              <p>Đáng tin cậy, trung thành</p>
+          </td>
+          <td><div id="triangle4" class="triangle" ></div>
+              <p>Quyết đoán</p>
+          </td>
+          <td><div id="triangle5" class="triangle" ></div>
+              <p>Nhanh nhẹn, năng động</p>
+          </td>
+      </tr>
+      <tr>
+          <td><div id="rectangle4" class="rectangle" ></div>
+              <p>Hậu đậu</p>
+          </td>
+          <td><i class="square" id="square5"  ></i>
+              <p>Thực tế</p>
+          </td>
+          <td><div id="thunder5" class="thunder" ></div>
+              <p>Giàu ý tưởng</p>
+          </td>
+          <td><i class="square" id="square6"  ></i>
+              <p>Đúng giờ giấc
+              </p>
+          </td>
+          <td><i class="circle" id="circle5"  ></i><br>
+              <p>Biết lắng nghe</p>            
+          </td>
+      </tr>
+      <tr>
+          <td><i class="circle" id="circle6"  ></i><br>
+              <p>Rộng lượng</p>            
+          </td>
+          <td><div id="thunder6" class="thunder" ></div>
+              <p>Dí dỏm, vui tính</p>
+          </td>
+          <td><div id="rectangle5" class="rectangle" ></div>
+              <p>Thích tìm tòi, khám phá</p>
+          </td>
+          <td><div id="triangle6" class="triangle" ></div>
+              <p>Nhất định phải thành công</p>
+          </td>
+          <td><div id="rectangle6" class="rectangle" ></div>
+              <p>Thiếu tự tin</p>
+          </td>
+      </tr>
+  
+  
+  </table>
+    <input id="btn1_prev" type="button" name="previous" class="previous action-button none" value="Previous" />
+    <input id="btn1" type="button" name="next" class="next action-button" value="Tiếp Tục" />
+  </fieldset>
+  <fieldset>
+    <h1 class="fs-title" style="color:red; font-size: large;">B.BẠN NHẬN XÉT VỀ CHÍNH MÌNH</h1>
+    <h3 class="fs-subtitle">Chọn <span style="color: red;"> 7</span> hình gần đúng với tính cách của bạn</h3>
+    <table id="partB" class="center">
+      <tr>
+           <td><div id="thunder7" class="thunder" ></div>
+               <p>Tôi luôn là trung tâm của các buổi họp mặt, tiệc tùng</p>
+           </td>
+           <td><i class="circle" id="circle7"  ></i><br>
+               <p>Tôi khó nói “không” với người khác</p>            
+           </td>
+           <td><div id="rectangle7" class="rectangle" ></div>
+               <p>Thỉnh thoảng tôi không thể hiện đúng như con người của tôi</p>
+           </td>
+       </tr> 
+       <tr>
+           <td><div id="triangle7" class="triangle" ></div>
+               <p>Tôi ra quyết định nhanh và quyết đoán</p>
+           </td>
+           <td><div id="thunder8" class="thunder" ></div>
+               <p>Tôi rất bừa bộn</p>
+           </td>
+           <td><i class="square" id="square7"  ></i>
+               <p>Tôi thích thiết lập các quy tắc thời khóa biểu
+               </p>
+           </td>
+
+       </tr>
+       <tr>
+           <td><i class="circle" id="circle8"  ></i><br>
+               <p>Tôi thích trang trí nhà cửa và nơi làm việc của tôi bằng cây xanh và tranh ảnh</p>            
+           </td>
+           <td><div id="rectangle8" class="rectangle" ></div>
+               <p>Ở thời điểm này, tôi đang nghĩ nhiều đến những hướng đi mới cho bản thân</p>
+           </td>
+           <td><div id="triangle8" class="triangle" ></div>
+               <p>Tôi làm hết mình và cũng chơi hết mình</p>
+           </td>
+       </tr>
+       <tr>
+           <td><i class="square" id="square8"  ></i>
+               <p>Tôi luôn cố tránh các cuộc tranh cãi, xung đột nếu có thể
+               </p>
+           </td>
+           <td><div id="triangle9" class="triangle" ></div>
+               <p>Tôi thường tranh cãi quyết liệt</p>
+           </td>
+           <td><i class="square" id="square9"  ></i>
+               <p>Tôi thích sưu tầm đồ vật
+               </p>
+           </td>
+       </tr>
+      
+       <tr>
+           <td><div id="triangle10" class="triangle" ></div>
+               <p>Tôi thích kết giao, cộng tác với những người quan trọng</p>
+           </td>
+           <td><i class="circle" id="circle9"  ></i><br>
+               <p>Tôi thích cuộc sống và công việc của tôi
+                   thoải mái, nhàng...</p>            
+           </td>
+           <td><div id="thunder9" class="thunder" ></div>
+               <p>Tôi yêu thích những sự bất ngờ</p>
+           </td>
+       </tr>   
+       <tr>
+           <td><div id="thunder10" class="thunder" ></div>
+               <p>Tôi thường mau chán</p>
+           </td>
+           <td><div id="rectangle9" class="rectangle" ></div>
+               <p>Hiện nay tôi đang trải nghiệm một số thay đổi trong cuộc đời mình</p>
+           </td>
+           <td><div id="rectangle10" class="rectangle" ></div>
+               <p>Tôi thường thay đổi suy nghĩ vào giờ chót</p>
+           </td>
+       </tr>   
+       <tr>
+           <td><div id="rectangle11" class="rectangle" ></div>
+               <p>Tâm trạng của tôi thay đổi mỗi ngày</p>
+           </td>
+           <td><div id="triangle11" class="triangle" ></div>
+               <p>Tôi chỉ chọn sử dụng hàng cao cấp “thượng hạng” mà thôi</p>
+           </td>
+           <td><i class="circle" id="circle10"  ></i><br>
+               <p>Tôi luôn sợ làm người khác mất lòng nên thường không dám nói thẳng và cố gắng tránh đụng chạm</p>            
+           </td>
+       </tr>   
+       <tr>
+           <td><i class="square" id="square10"  ></i>
+               <p>Tôi khá trầm lặng và thích riêng tư
+               </p>
+           </td>
+           <td><div id="thunder11" class="thunder" ></div>
+               <p>Tôi thường nói nhanh, bộc phát và dùng nhiều điệu bộ, cử chỉ khi nói</p>
+           </td>
+           <td><div id="triangle12" class="triangle" ></div>
+               <p>Tôi nói chuyện tự tin và dễ dàng trước công chúng</p>
+           </td>
+       </tr>   
+       <tr>
+           <td><i class="circle" id="circle11"  ></i><br>
+               <p>Tôi thường nghĩ đến lợi ích của người khác trước</p>            
+           </td>
+           <td><i class="square" id="square11"  ></i>
+               <p>Ngăn bàn, tủ quần áo của tôi luôn gọn gàng, ngăn nắp
+               </p>
+           </td>
+           <td><i class="square" id="square12"  ></i>
+               <p>Tôi luôn hoàn tất công việc đúng thời hạn
+               </p>
+           </td>
+       </tr>   
+
+   </table>
+    <input id= "btn2_prev" type="button" name="previous" class="previous action-button none" value="Previous" />
+    <input id="btn2" type="button" name="next" class="next action-button" value="Tiếp Tục" />
+  </fieldset>
+  <fieldset>
+    <h1 class="fs-title" style="color:red; font-size: large;">B.CÁCH CƯ XỬ VỚI MỌI NGƯỜI</h1>
+    <h3 class="fs-subtitle">Chọn <span style="color: red;"> 7</span> hình gần đúng với tính cách của bạn</h3>
+    <table id="partC" class="center">
+      
+          <tr>
+              <td><div id="rectangle12" class="rectangle" ></div>
+                  <p>Mọi người dễ làm tôi lúng túng, bối rối</p>
+              </td>
+              <td><div id="rectangle13" class="rectangle" ></div>
+                  <p>Ở thời điểm, tôi luôn cố gắng tìm những người hiểu được hoàn cảnh của tôi</p>
+              </td>
+              <td><div id="triangle13" class="triangle" ></div>
+                  <p> Tôi thích gánh vác trách nhiệm</p>
+              </td>
+           </tr> 
+           <tr>
+              <td><div id="thunder12" class="thunder" ></div>
+                  <p>Khi nói chuyện, tôi thích nói hơn lắng nghe</p>
+              </td>
+              <td><i class="circle" id="circle12"  ></i><br>
+                  <p>Tôi đối xử với đồng nghiệp và bạn bè như người thân trong gia đình</p>            
+              </td>
+              <td><i class="circle" id="circle13"  ></i><br>
+                  <p>Tôi thích làm việc theo nhóm</p>            
+              </td>
+   
+           </tr>
+           <tr>
+              <td><i class="square" id="square13"  ></i>
+                  <p>Tôi luôn suy nghĩ kỹ trước khi nói
+                  </p>
+              </td>
+               <td><div id="rectangle14" class="rectangle" ></div>
+                   <p>Tôi không thích hứa hẹn hoặc cam kết điều gì</p>
+               </td>
+               <td><i class="square" id="square14"  ></i>
+                  <p>Tôi thích làm việc một mình
+                  </p>
+              </td>
+           </tr>
+           <tr>
+              <td><i class="circle" id="circle14"  ></i><br>
+                  <p>Tôi là một người giỏi xã giao</p>            
+              </td>
+              <td><i class="square" id="square15"  ></i>
+                  <p>Tôi là một người bạn rất trung thành
+                  </p>
+              </td>
+              <td><div id="thunder13" class="thunder" ></div>
+                  <p>Thỉnh thoảng tôi chinh phục người khác bằng khả năng và nhiệt huyết của tôi</p>
+              </td>
+           </tr>
+          
+           <tr>
+               <td><div id="triangle14" class="triangle" ></div>
+                   <p>Tôi không e ngại nói thẳng ra những chủ kiến của mình</p>
+               </td>
+               <td><div id="thunder14" class="thunder" ></div>
+                  <p>Tôi dễ thay đổi trong các mối quan hệ của mình</p>
+              </td>
+              <td><i class="circle" id="circle15"  ></i><br>
+                  <p>Nếu bạn cần, tôi sẽ cố gắng hết sức để giúp bạn</p>            
+              </td>
+           </tr>   
+           <tr>
+              <td><div id="rectangle15" class="rectangle" ></div>
+                  <p>Tôi ghét bị đặt vào những tình thế khó xử</p>
+              </td>
+              <td><div id="triangle15" class="triangle" ></div>
+                  <p>Tôi là tấm gương cho nhiều người</p>
+              </td>
+              <td><div id="triangle16" class="triangle" ></div>
+                  <p>Thôi thích chỉ đạo hoặc giao việc cho người khác làm</p>
+              </td>
+           </tr>   
+           <tr>
+              <td><div id="thunder15" class="thunder" ></div>
+                  <p>Tôi nghĩ gì nói đó</p>
+              </td>
+               <td><div id="thunder16" class="thunder" ></div>
+                  <p>Tôi rất giỏi động viên, khuyến khích người khác</p>
+              </td>
+              <td><div id="rectangle16" class="rectangle" ></div>
+                  <p>Lúc này tôi đang cần một người hướng dẫn, cố vấn cho tôi</p>
+              </td>
+           </tr>   
+           <tr>
+              <td><i class="circle" id="circle16"  ></i><br>
+                  <p>Tôi thích nói chuyện và chia sẻ với mọi người</p>            
+              </td>
+              <td><i class="square" id="square16"  ></i>
+                  <p>Tôi rất kiên định, một khi đã quyết định thì tôi sẽ theo đuổi đến cùng
+                  </p>
+              </td>
+              <td><div id="thunder17" class="thunder" ></div>
+                  <p>Tôi hay thiếu kiên nhẫn và thường ngắt lời người khác</p>
+              </td>
+           </tr>   
+           <tr>
+              <td><i class="square" id="square17"  ></i>
+                  <p>Tôi không thích thể hiện tình cảm trước đám đông
+                  </p>
+              </td>
+              <td><div id="triangle17" class="triangle" ></div>
+                  <p>Tôi biết tận dụng tình thế, mối quan hệ để đạt được mục tiêu của mình</p>
+              </td>
+              <td><i class="circle" id="circle17"  ></i><br>
+                  <p>Thỉnh thoảng tôi cảm thấy như mình bị lợi dụng</p>            
+              </td>
+           </tr>   
+   
+    </table>
+    <input id="btn3" type="button" name="next" class="next action-button" value="Tiếp Tục" />
+  </fieldset>
+  <fieldset>
+    <table id="end" cellspacing="0" cellpadding="0" class="noneboder center" align="center">
+        <th><i class="circle" style="background-color: green;" ></i><p>Số Hình Tròn Là:<h1><div id="circle_count"></h1></div></p></th>
+        <th><i class="square" style="background-color:skyblue;"></i><p>Số Hình Vuông Là:<h1><div id="square_count"></h1></div></p></th>
+        <th><div class="triangle" style=" background-color: red;"></div><p>Số Hình Tam Giác Là:<h1><div id="triangle_count"></h1></div></p></th>
+        <th><div class="thunder" style=" background-color: yellow;"></div><p>Số Hình Sấm Chớp Là:<h1><div id="thunder_count"></h1></div></p></th>
+        <th><div class="rectangle" style=" background-color: purple;"></div><p>Số Hình Chữ nhật Là:<h1><div id="rectangle_count"></h1></div></p></th>
+    </table>
+    <br><hr><br>
+    <h2 class="fs-title">Vui Lòng Để Lại Email để được nhận kết Quả</h2>
+    <h3 class="fs-subtitle">Chúng Tôi Sẽ Không Chia Sẽ Email Của Bạn Ra Ngoài</h3>
+    <div class="mauticform-error" id="mauticform_tracnghiemtinhcach_error"></div>
+        <div class="mauticform-message" id="mauticform_tracnghiemtinhcach_message"></div>
+        <div class="mauticform-innerform">
+
+            
+          <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+
+            <div id="mauticform_tracnghiemtinhcach_ho_ten" data-validate="ho_ten" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required">
+                <label id="mauticform_label_tracnghiemtinhcach_ho_ten" for="mauticform_input_tracnghiemtinhcach_ho_ten" class="mauticform-label">Họ tên</label>
+                <input id="mauticform_input_tracnghiemtinhcach_ho_ten" name="mauticform[ho_ten]" value="" class="mauticform-input" type="text">
+                <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+            </div>
+
+            <div id="mauticform_tracnghiemtinhcach_email" data-validate="email" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-2 mauticform-required">
+                <label id="mauticform_label_tracnghiemtinhcach_email" for="mauticform_input_tracnghiemtinhcach_email" class="mauticform-label">Email</label>
+                <input id="mauticform_input_tracnghiemtinhcach_email" name="mauticform[email]" value="" class="mauticform-input" type="email">
+                <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+            </div>
+
+                <input id="mauticform_input_tracnghiemtinhcach_circle" name="mauticform[circle]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemtinhcach_square" name="mauticform[square]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemtinhcach_triangle" name="mauticform[triangle]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemtinhcach_thunder" name="mauticform[thunder]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemtinhcach_rectangle" name="mauticform[rectangle]" value="" class="mauticform-hidden" type="hidden">
+                <div id="mauticform_tracnghiemtinhcach_so_dien_thoai" class="mauticform-row mauticform-tel mauticform-field-8">
+                    <label id="mauticform_label_tracnghiemtinhcach_so_dien_thoai" for="mauticform_input_tracnghiemtinhcach_so_dien_thoai" class="mauticform-label">Số Điện Thoại</label>
+                    <input id="mauticform_input_tracnghiemtinhcach_so_dien_thoai" name="mauticform[so_dien_thoai]" value="" class="mauticform-input" type="tel">
+                    <span class="mauticform-errormsg" style="display: none;"></span>
+                </div>
+    
+                <div id="mauticform_tracnghiemtinhcach_ten_cong_ty" class="mauticform-row mauticform-text mauticform-field-9">
+                    <label id="mauticform_label_tracnghiemtinhcach_ten_cong_ty" for="mauticform_input_tracnghiemtinhcach_ten_cong_ty" class="mauticform-label">Tên Công Ty</label>
+                    <input id="mauticform_input_tracnghiemtinhcach_ten_cong_ty" name="mauticform[ten_cong_ty]" value="" class="mauticform-input" type="text">
+                    <span class="mauticform-errormsg" style="display: none;"></span>
+                </div>
+            <div id="mauticform_tracnghiemtinhcach_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-8">
+                <button type="submit" name="mauticform[submit]" id="mauticform_input_tracnghiemtinhcach_submit" value="" class="mauticform-button action-button ">Kết Thúc</button>
+            </div>
+            </div>
+        </div>
+
+        <input type="hidden" name="mauticform[formId]" id="mauticform_tracnghiemtinhcach_id" value="86">
+        <input type="hidden" name="mauticform[return]" id="mauticform_tracnghiemtinhcach_return" value="">
+        <input type="hidden" name="mauticform[formName]" id="mauticform_tracnghiemtinhcach_name" value="tracnghiemtinhcach">
+
+  
+   
+  </fieldset>
+  
+</form>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+<script>
+    // Mouse In-Out Starting:
+    // 1.Circle Start: 
+
+
+      (function() {
+        const heart = document.getElementById('circle');
+        heart.addEventListener('click', function() {
+            heart.classList.toggle('green');
+           
+            var arr=document.querySelectorAll('.green').length;
+        document.getElementById("circle_count").innerHTML=arr;               
+        document.getElementById("mauticform_input_tracnghiemtinhcach_circle").value=arr;                   
+        });
+      })();
+      (function() {
+      for (i=1;i<=17;i++){    
+        const circle = document.getElementById('circle'+i);
+        circle.addEventListener('click', function() {
+           circle.classList.toggle('green');
+           var arr=document.querySelectorAll(' .green').length;
+        document.getElementById("circle_count").innerHTML=arr;
+        document.getElementById("mauticform_input_tracnghiemtinhcach_circle").value=arr;      
+        });
+    }
+    })();
+
+       // 1.Circle End
+        //2.Square Start:
+      
+      (function() {
+        const circle = document.getElementById('square');
+        circle.addEventListener('click', function() {
+           circle.classList.toggle('blue');
+           var arr=document.querySelectorAll(' .blue').length;
+        document.getElementById("square_count").innerHTML=arr;
+        document.getElementById("mauticform_input_tracnghiemtinhcach_square").value=arr;    
+        });
+    })();
+
+   
+    (function() {
+        for(i=1;i<=17;i++){
+        const circle = document.getElementById('square'+i);
+        circle.addEventListener('click', function() {
+           circle.classList.toggle('blue');
+           var arr=document.querySelectorAll(' .blue').length;
+        document.getElementById("square_count").innerHTML=arr;
+        document.getElementById("mauticform_input_tracnghiemtinhcach_square").value=arr;  
+        });
+    }
+    })();
+
+       //2.Square End
+    //3.Triangle Star:
+    (function() {
+        const heart = document.getElementById('triangle');
+        heart.addEventListener('click', function() {
+            heart.classList.toggle('red');
+            var arr=document.querySelectorAll('.red').length;
+        document.getElementById("triangle_count").innerHTML=arr;
+        document.getElementById("mauticform_input_tracnghiemtinhcach_triangle").value=arr;                     
+        });
+      })();
+      (function() {
+        for(i=1;i<=17;i++){  
+        const heart = document.getElementById('triangle'+i);
+        heart.addEventListener('click', function() {
+            heart.classList.toggle('red');
+            var arr=document.querySelectorAll('.red').length;
+        document.getElementById("triangle_count").innerHTML=arr;
+        document.getElementById("mauticform_input_tracnghiemtinhcach_triangle").value=arr;                     
+        });
+    }
+      })();
+    
+    //3.Triangle End
+    //4.Thunder Star
+    (function() {
+        const heart = document.getElementById('thunder');
+        heart.addEventListener('click', function() {
+            heart.classList.toggle('yellow');
+            var arr=document.querySelectorAll('.yellow').length;
+        document.getElementById("thunder_count").innerHTML=arr; 
+        document.getElementById("mauticform_input_tracnghiemtinhcach_thunder").value=arr;                    
+        });
+      })();
+      (function() {
+        for(i=1;i<=17;i++){    
+        const heart = document.getElementById('thunder'+i);
+        heart.addEventListener('click', function() {
+            heart.classList.toggle('yellow');
+            var arr=document.querySelectorAll('.yellow').length;
+        document.getElementById("thunder_count").innerHTML=arr; 
+        document.getElementById("mauticform_input_tracnghiemtinhcach_thunder").value=arr;                    
+        });
+        }
+      })();
+
+    //4.Thunder End
+    //5.Rectangle Start  
+    (function() {
+        const heart = document.getElementById('rectangle');
+        heart.addEventListener('click', function() {
+            heart.classList.toggle('purple');
+            var arr=document.querySelectorAll('.purple').length;
+        document.getElementById("rectangle_count").innerHTML=arr; 
+        document.getElementById("mauticform_input_tracnghiemtinhcach_rectangle").value=arr;                    
+        });
+      })();
+      (function() {
+        for(i=1;i<17;i++){    
+        const heart = document.getElementById('rectangle'+i);
+        heart.addEventListener('click', function() {
+            heart.classList.toggle('purple');
+            var arr=document.querySelectorAll('.purple').length;
+        document.getElementById("rectangle_count").innerHTML=arr;  
+        document.getElementById("mauticform_input_tracnghiemtinhcach_rectangle").value=arr;                    
+        });
+    }
+      })();
+    //5.Recangle End
+    //Global Rules:
+    function check(){
+        var a=document.querySelectorAll('.green').length;
+        var b=document.querySelectorAll('.blue').length;
+        var c=document.querySelectorAll('.red').length;
+        var d=document.querySelectorAll('.yellow').length;
+        var e=document.querySelectorAll('.purple').length;
+        jsarray = [a,b,c,d,e];
+        sessionStorage.setItem("jsArray", JSON.stringify(jsarray));
+        console.log(jsarray);
+        if(a+b+c+d+e>7)
+        {
+            alert("You Can Choose Only 7 Simple!!!")
+            
+            return;
+        }
+      }
+      ////click Rule show/hide Function
+      $(document).ready(function(){
+          $('#btn1').mousedown(function(event){
+              var a0 = $('#partA .red').length;
+              var a1 = $('#partA .blue').length;
+              var a2 = $('#partA .green').length;
+              var a3 = $('#partA .yellow').length;
+              var a4 = $('#partA .purple').length;
+             
+
+              if(a0+a1+a2+a3+a4 !== 7 ){
+                event.stopPropagation();
+                alert('Bạn Phải Chọn Đúng 7 Hình');
+                
+              };
+             
+          });
+      });
+      $(document).ready(function(event){
+          $('#btn2').mousedown(function(event){
+              var a0 = $('#partB .red').length;
+              var a1 = $('#partB .blue').length;
+              var a2 = $('#partB .green').length;
+              var a3 = $('#partB .yellow').length;
+              var a4 = $('#partB .purple').length;
+             
+
+              if(a0+a1+a2+a3+a4 !== 7 ){
+                event.stopPropagation();
+                alert('Bạn Phải Chọn Đúng 7 Hình');
+                
+              };
+          });
+      });
+      $(document).ready(function(event){
+          $('#btn3').mousedown(function(event){
+              var a0 = $('#partC .red').length;
+              var a1 = $('#partC .blue').length;
+              var a2 = $('#partC .green').length;
+              var a3 = $('#partC .yellow').length;
+              var a4 = $('#partC .purple').length;
+              if(a0+a1+a2+a3+a4 !== 7 ){
+                event.stopPropagation();
+                alert('Bạn Phải Chọn Đúng 7 Hình');
+              };
+          });
+      });
+       
+                
+</script>
+<script>
+    //jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+</script>
+</body>
+</html>

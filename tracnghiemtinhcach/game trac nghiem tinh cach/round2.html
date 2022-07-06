@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Game Trac Nghiem</title>
+    <style>
+        table, th, td {
+  border: 1px solid;
+}
+td {
+  text-align: center;
+}
+        #circle,#circle1,#circle2,#circle3,#circle4,#circle5,#circle6 {
+         color: grey;  
+         font-size: 100px;
+        }
+
+        #circle.red_temp{
+          color: red;  
+        }
+
+        #circle.red {
+         color: red;
+        }
+        
+        #circle1.red {
+            color: red;
+        } 
+       
+        #square{
+          color:grey;
+          font-size: 100px;  
+        }  
+        #square.green{
+            color: green;
+            
+        }  
+    </style>
+<script src="https://use.fontawesome.com/d7a5f8575a.js"></script>
+</head>
+<body >
+    <h1>TÂM LÝ HÌNH HỌC PHẦN B</h1>
+    <p>Đây là trắc nghiệm đơn giản và thú vị. Bạn chỉ cần chọn các câu hay cụm từ mô tả về bạn rõ nét nhất bằng cách đánh dấu vào câu đó.</p>
+    <table>
+        <tr>
+            <td><i class="fa fa-circle" id="circle" ></i><br>
+                <p>Tôi khó nói “không” với người khác</p>            
+            </td>
+            <td><i class="fa fa-square" id="square" ></i>
+                <p>Tôi thích thiết lập các quy tắc thời khóa biểu</p>
+            </td>
+        </tr>   
+        <tr>
+            <td><i class="fa fa-circle" id="circle1" ></i><br>
+                <p>Tôi khó nói “không” với người khác</p>            
+            </td>
+            <td><i class="fa fa-square" id="square"  ></i>
+                <p>Tôi thích thiết lập các quy tắc thời khóa biểu</p>
+            </td>
+        </tr>                  
+    </table>
+    <p>The Number of Circle are:<div id="circle_count"></div></p>
+    <p>The Number of Square are:<div id="square_count"></div></p>
+
+    <script>
+      
+
+        (function() {
+            const heart = document.getElementById('circle');
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('red');
+                var arr=document.querySelectorAll('.red').length;
+            document.getElementById("circle_count").innerHTML=arr;                   
+            });
+          })();
+        (function() {
+            const circle = document.getElementById('square');
+            circle.addEventListener('mousedown', function() {
+               circle.classList.toggle('green');
+               var arr=document.querySelectorAll(' .green').length;
+            document.getElementById("square_count").innerHTML=arr;
+            });
+        })();
+        (function() {
+            const circle = document.getElementById('circle1');
+            circle.addEventListener('mousedown', function() {
+               circle.classList.toggle('red');
+               var arr=document.querySelectorAll(' .red').length;
+            document.getElementById("circle_count").innerHTML=arr;
+            });
+        })();
+        
+          
+    </script>
+</body>
+</html>

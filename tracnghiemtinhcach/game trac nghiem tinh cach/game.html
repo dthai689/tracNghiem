@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <title>Game Trac Nghiem</title>
+    <style>
+
+        /* Mobile */
+@media (hover: hover) { 
+  circle:hover {
+    color: grey;  
+    font-size: 100px;
+  }
+}
+       /* Desktop */
+  
+        
+        table {
+  width: 80%;
+}
+        table, th, td {
+  border: 1px solid;
+  cursor: pointer;
+  
+}
+td {
+  text-align: center;
+}
+.center {
+   
+  margin-left: auto;
+  margin-right: auto;
+}
+    /* Circle Section */
+        #circle,#circle1,#circle2,#circle3,#circle4,#circle5,#circle6, #circle7,#circle8,#circle9,#circle10,#circle11,#circle12,#circle13,#circle14,#circle15,#circle16,#circle17,#circle18 {
+         color: grey;  
+         font-size: 100px;
+         margin-top: 4px;
+        
+        }
+        #circle:hover,#circle1:hover, #circle2:hover,#circle3:hover,#circle4:hover,#circle5:hover,#circle6:hover,#circle7:hover,#circle8:hover, #circle9:hover,#circle10:hover,#circle11:hover,#circle12:hover,#circle13:hover,#circle14:hover,#circle15:hover,#circle16:hover,#circle17:hover,#circle18:hover
+        {
+         color: green;  
+         font-size: 100px;
+        }
+       
+        #circle.green,#circle1.green,#circle2.green,#circle3.green,#circle4.green,#circle5.green,#circle6.green,#circle7.green,#circle8.green,#circle9.green,#circle10.green,#circle11.green,#circle12.green,#circle13.green,#circle14.green,#circle15.green,#circle16.green,#circle17.green,#circle18.green {
+         color: green;
+        }
+       
+    /* Square Section */ 
+        #square,#square1,#square2,#square3,#square4,#square5,#square6,#square7,#square8,#square9,#square10,#square11,#square12,#square13,#square14,#square15,#square16,#square17{
+          color:grey;
+          font-size: 100px;  
+          vertical-align: middle;
+             display: inline-block;
+        }  
+        #square:hover,#square1:hover,#square2:hover,#square3:hover,#square4:hover,#square5:hover,#square6:hover,#square7:hover,#square8:hover,#square9:hover,#square10:hover,#square11:hover,#square12:hover,#square13:hover,#square14:hover,#square15:hover,#square16:hover,#square17:hover{
+            color: skyblue;  
+         font-size: 100px;
+        }
+
+
+        #square.blue,#square1.blue,#square2.blue,#square3.blue,#square4.blue,#square5.blue,#square6.blue, #square7.blue,#square8.blue,#square9.blue,#square10.blue,#square11.blue,#square12.blue,#square13.blue,#square14.blue,#square15.blue,#square16.blue,#square17.blue{
+            color: skyblue;
+            
+        }  
+       
+    /* Triangle Section     */
+        .triangle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(logo.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .triangle:hover,.triangle:focus,.triangle:active {
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: red;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(triangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #triangle.red,#triangle1.red,#triangle2.red,#triangle3.red,#triangle4.red,#triangle5.red,#triangle6.red,#triangle7.red,#triangle8.red,#triangle9.red,#triangle10.red,#triangle11.red,#triangle12.red,#triangle13.red,#triangle14.red,#triangle15.red,#triangle16.red,#triangle17.red{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: red;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(triangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+      /* Thunder Section */
+      .thunder{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+             display: inline-block;
+      }
+      .thunder:hover{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: yellow;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      #thunder.yellow,#thunder1.yellow,#thunder2.yellow,#thunder3.yellow,#thunder4.yellow,#thunder5.yellow,#thunder6.yellow,#thunder7.yellow,#thunder8.yellow,#thunder9.yellow,#thunder10.yellow,#thunder11.yellow,#thunder12.yellow,#thunder13.yellow,#thunder14.yellow,#thunder15.yellow,#thunder16.yellow,#thunder17.yellow{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: yellow;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      /* Rectangle Section */
+      .rectangle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+             display: inline-block;
+      }
+      .rectangle:hover{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: purple;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      #rectangle.purple,#rectangle1.purple,#rectangle2.purple,#rectangle3.purple,#rectangle4.purple,#rectangle5.purple,#rectangle6.purple,#rectangle7.purple,#rectangle8.purple,#rectangle9.purple,#rectangle10.purple,#rectangle11.purple,#rectangle12.purple,#rectangle13.purple,#rectangle14.purple,#rectangle15.purple,#rectangle16.purple,#rectangle17.purple{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: purple;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+    </style>
+<script src="https://use.fontawesome.com/d7a5f8575a.js"></script>
+
+
+</head>
+<body >
+    
+   
+    <h1 style="text-align: center; font-size: 50px; color: rgb(10, 10, 153);">TÂM LÝ HÌNH HỌC HƯỚNG DẪN LÀM BÀI TRẮC NGHIỆM</h1>
+    <h2>CHỌN CÁC MÔ TẢ VỀ BẠN RÕ NÉT NHẤT</h2>
+    <p>1. Đây là trắc nghiệm đơn giản và thú vị. Bạn chỉ cần chọn các câu hay cụm từ mô tả về bạn rõ nét nhất bằng cách đánh dấu vào câu đó.</p>
+    <p>2. Trong mỗi phần, bạn chọn <span style="color: red;"><b>7</b></span> câu hay cụm từ đúng với bạn nhất.</p>  
+    <a href="#partA">I.Phần A: Các nét tính cách của bạn.</a><br>
+    <a href="#partB">II.Phần B: Bạn nhận xét về chính mình.</a><br>
+    <a href="#partC">III.Phần C: Cách cư xử với mọi người.</a>
+    <h2>CÁCH THỐNG KÊ ĐIỂM</h2> 
+    <p>- Sau khi bạn đã chọn <span style="color: red;"><b>7</b></span> câu hay cụm từ đúng, Kết quả sẽ được hiển thị ở <a href="#end"> <b>Cuối Trang</b></a></p>
+    <p style="color: red;"><b>Lưu ý:</b></p>
+    <p>
+        Vui lòng chọn những câu hay cụm từ miêu tả về mình chứ không phải hình tượng mà mình mong muốn trở thành.
+        </p>
+
+    <br><hr><br>
+    <button onclick="myFunction()">Click Me</button>
+    <div id="myDIV">
+    <h1 style="text-align:center;color: rgb(10, 10, 153); ">TÂM LÝ HÌNH HỌC PHẦN A </h1>
+    <h3 style="text-align:center;" >CÁC NÉT TÍNH CÁCH CỦA BẠN</h3>
+   
+
+           
+                <table id="partA" class="center">
+                    <tr>
+                        <td><div id="triangle" class="triangle" ></div>
+                            <p>Thích lãnh đạo</p>
+                        </td>
+                        <td><div id="triangle1" class="triangle" ></div>
+                            <p>Có tham vọng</p>
+                        </td>
+                        <td><i class="fa fa-circle" id="circle"  ></i><br>
+                            <p>Dễ cảm thông, quan tâm đến người khác</p>            
+                        </td>
+                        <td><i class="fa fa-square" id="square" ></i>
+                            <p>Chi tiết, để ý từng li từng tí</p>
+                        </td>
+                        <td><i class="fa fa-square" id="square1"  ></i>
+                            <p>Cổ điển, truyền thống</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div id="thunder" class="thunder" ></div>
+                            <p>Sáng tạo, đổi mới</p>
+                        </td>
+                        <td><i class="fa fa-square" id="square2"  ></i>
+                            <p>Tỉ mỉ, có tổ chức</p>
+                        </td>
+                        <td><div id="thunder1" class="thunder" ></div>
+                            <p>Khác thường, lập dị</p>
+                        </td>
+                        <td><i class="fa fa-circle" id="circle1"  ></i><br>
+                            <p>“Sứ giả hòa bình” kết nối mọi người</p>            
+                        </td>
+                        <td><div id="thunder2" class="thunder" ></div>
+                            <p>Không thích bị ràng buộc trong khuôn khổ</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-square" id="square3"  ></i>
+                            <p>Tuân thủ nguyên tắc, nội quy</p>
+                        </td>
+                        <td><i class="fa fa-circle" id="circle2"  ></i><br>
+                            <p>Đa cảm</p>            
+                        </td>
+                        <td><div id="rectangle" class="rectangle" ></div>
+                            <p>Hay quên</p>
+                        </td>
+                        <td><div id="rectangle1" class="rectangle" ></div>
+                            <p>Dễ bị người khác ảnh hưởng</p>
+                        </td>
+                        <td><i class="fa fa-circle" id="circle3"  ></i><br>
+                            <p>Hay giúp đỡ người khác</p>            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div id="triangle2" class="triangle" ></div>
+                            <p>Thích cạnh tranh, thi đua</p>
+                        </td>
+                        <td><div id="rectangle2" class="rectangle" ></div>
+                            <p>Đang trong giai đoạn có nhiều thay đổi</p>
+                        </td>
+                        <td><div id="triangle3" class="triangle" ></div>
+                            <p>Thích mạo hiểm</p>
+                        </td>
+                        <td><div id="thunder3" class="thunder" ></div>
+                            <p>Không ngại bộc lộ cảm xúc, suy nghĩ thật của mình</p>
+                        </td>
+                        <td><div id="rectangle3" class="rectangle" ></div>
+                            <p>Hay cảm thấy bối rối, lúng túng trong cuộc sống</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-circle" id="circle4"  ></i><br>
+                            <p>Người của mọi người</p>            
+                        </td>
+                        <td><div id="thunder4" class="thunder" ></div>
+                            <p>Bốc đồng</p>
+                        </td>
+                        <td><i class="fa fa-square" id="square4"  ></i>
+                            <p>Đáng tin cậy, trung thành</p>
+                        </td>
+                        <td><div id="triangle4" class="triangle" ></div>
+                            <p>Quyết đoán</p>
+                        </td>
+                        <td><div id="triangle5" class="triangle" ></div>
+                            <p>Nhanh nhẹn, năng động</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div id="rectangle4" class="rectangle" ></div>
+                            <p>Hậu đậu</p>
+                        </td>
+                        <td><i class="fa fa-square" id="square5"  ></i>
+                            <p>Thực tế</p>
+                        </td>
+                        <td><div id="thunder5" class="thunder" ></div>
+                            <p>Giàu ý tưởng</p>
+                        </td>
+                        <td><i class="fa fa-square" id="square6"  ></i>
+                            <p>Đúng giờ giấc
+                            </p>
+                        </td>
+                        <td><i class="fa fa-circle" id="circle5"  ></i><br>
+                            <p>Biết lắng nghe</p>            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-circle" id="circle6"  ></i><br>
+                            <p>Rộng lượng</p>            
+                        </td>
+                        <td><div id="thunder6" class="thunder" ></div>
+                            <p>Dí dỏm, vui tính</p>
+                        </td>
+                        <td><div id="rectangle5" class="rectangle" ></div>
+                            <p>Thích tìm tòi, khám phá</p>
+                        </td>
+                        <td><div id="triangle6" class="triangle" ></div>
+                            <p>Nhất định phải thành công</p>
+                        </td>
+                        <td><div id="rectangle6" class="rectangle" ></div>
+                            <p>Thiếu tự tin</p>
+                        </td>
+                    </tr>
+                
+                
+                </table>
+            </div>
+    <br><hr><br>
+    <h1 style="text-align:center;color: rgb(10, 10, 153); ">TÂM LÝ HÌNH HỌC PHẦN B </h1>
+    <h3 style="text-align:center;">BẠN NHẬN XÉT VỀ CHÍNH MÌNH</h3>
+    <table id="partB" class="center">
+       <tr>
+            <td><div id="thunder7" class="thunder" ></div>
+                <p>Tôi luôn là trung tâm của các buổi họp mặt, tiệc tùng</p>
+            </td>
+            <td><i class="fa fa-circle" id="circle7"  ></i><br>
+                <p>Tôi khó nói “không” với người khác</p>            
+            </td>
+            <td><div id="rectangle7" class="rectangle" ></div>
+                <p>Thỉnh thoảng tôi không thể hiện đúng như con người của tôi</p>
+            </td>
+        </tr> 
+        <tr>
+            <td><div id="triangle7" class="triangle" ></div>
+                <p>Tôi ra quyết định nhanh và quyết đoán</p>
+            </td>
+            <td><div id="thunder8" class="thunder" ></div>
+                <p>Tôi rất bừa bộn</p>
+            </td>
+            <td><i class="fa fa-square" id="square7"  ></i>
+                <p>Tôi thích thiết lập các quy tắc thời khóa biểu
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+            <td><i class="fa fa-circle" id="circle8"  ></i><br>
+                <p>Tôi thích trang trí nhà cửa và nơi làm việc của tôi bằng cây xanh và tranh ảnh</p>            
+            </td>
+            <td><div id="rectangle8" class="rectangle" ></div>
+                <p>Ở thời điểm này, tôi đang nghĩ nhiều đến những hướng đi mới cho bản thân</p>
+            </td>
+            <td><div id="triangle8" class="triangle" ></div>
+                <p>Tôi làm hết mình và cũng chơi hết mình</p>
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fa fa-square" id="square8"  ></i>
+                <p>Tôi luôn cố tránh các cuộc tranh cãi, xung đột nếu có thể
+                </p>
+            </td>
+            <td><div id="triangle9" class="triangle" ></div>
+                <p>Tôi thường tranh cãi quyết liệt</p>
+            </td>
+            <td><i class="fa fa-square" id="square9"  ></i>
+                <p>Tôi thích sưu tầm đồ vật
+                </p>
+            </td>
+        </tr>
+       
+        <tr>
+            <td><div id="triangle10" class="triangle" ></div>
+                <p>Tôi thích kết giao, cộng tác với những người quan trọng</p>
+            </td>
+            <td><i class="fa fa-circle" id="circle9"  ></i><br>
+                <p>Tôi thích cuộc sống và công việc của tôi
+                    thoải mái, nhàng...</p>            
+            </td>
+            <td><div id="thunder9" class="thunder" ></div>
+                <p>Tôi yêu thích những sự bất ngờ</p>
+            </td>
+        </tr>   
+        <tr>
+            <td><div id="thunder10" class="thunder" ></div>
+                <p>Tôi thường mau chán</p>
+            </td>
+            <td><div id="rectangle9" class="rectangle" ></div>
+                <p>Hiện nay tôi đang trải nghiệm một số thay đổi trong cuộc đời mình</p>
+            </td>
+            <td><div id="rectangle10" class="rectangle" ></div>
+                <p>Tôi thường thay đổi suy nghĩ vào giờ chót</p>
+            </td>
+        </tr>   
+        <tr>
+            <td><div id="rectangle11" class="rectangle" ></div>
+                <p>Tâm trạng của tôi thay đổi mỗi ngày</p>
+            </td>
+            <td><div id="triangle11" class="triangle" ></div>
+                <p>Tôi chỉ chọn sử dụng hàng cao cấp “thượng hạng” mà thôi</p>
+            </td>
+            <td><i class="fa fa-circle" id="circle10"  ></i><br>
+                <p>Tôi luôn sợ làm người khác mất lòng nên thường không dám nói thẳng và cố gắng tránh đụng chạm</p>            
+            </td>
+        </tr>   
+        <tr>
+            <td><i class="fa fa-square" id="square10"  ></i>
+                <p>Tôi khá trầm lặng và thích riêng tư
+                </p>
+            </td>
+            <td><div id="thunder11" class="thunder" ></div>
+                <p>Tôi thường nói nhanh, bộc phát và dùng nhiều điệu bộ, cử chỉ khi nói</p>
+            </td>
+            <td><div id="triangle12" class="triangle" ></div>
+                <p>Tôi nói chuyện tự tin và dễ dàng trước công chúng</p>
+            </td>
+        </tr>   
+        <tr>
+            <td><i class="fa fa-circle" id="circle11"  ></i><br>
+                <p>Tôi thường nghĩ đến lợi ích của người khác trước</p>            
+            </td>
+            <td><i class="fa fa-square" id="square11"  ></i>
+                <p>Ngăn bàn, tủ quần áo của tôi luôn gọn gàng, ngăn nắp
+                </p>
+            </td>
+            <td><i class="fa fa-square" id="square12"  ></i>
+                <p>Tôi luôn hoàn tất công việc đúng thời hạn
+                </p>
+            </td>
+        </tr>   
+
+    </table>
+    <br><hr><br>
+    <h1 style="text-align:center;color: rgb(10, 10, 153); ">TÂM LÝ HÌNH HỌC PHẦN C </h1>
+    <h3 style="text-align:center;">CÁCH CƯ XỬ VỚI MỌI NGƯỜI</h3>
+    <table id="partC" class="center">
+        <table class="center">
+            <tr>
+                <td><div id="rectangle12" class="rectangle" ></div>
+                    <p>Mọi người dễ làm tôi lúng túng, bối rối</p>
+                </td>
+                <td><div id="rectangle13" class="rectangle" ></div>
+                    <p>Ở thời điểm, tôi luôn cố gắng tìm những người hiểu được hoàn cảnh của tôi</p>
+                </td>
+                <td><div id="triangle13" class="triangle" ></div>
+                    <p> Tôi thích gánh vác trách nhiệm</p>
+                </td>
+             </tr> 
+             <tr>
+                <td><div id="thunder12" class="thunder" ></div>
+                    <p>Khi nói chuyện, tôi thích nói hơn lắng nghe</p>
+                </td>
+                <td><i class="fa fa-circle" id="circle12"  ></i><br>
+                    <p>Tôi đối xử với đồng nghiệp và bạn bè như người thân trong gia đình</p>            
+                </td>
+                <td><i class="fa fa-circle" id="circle13"  ></i><br>
+                    <p>Tôi thích làm việc theo nhóm</p>            
+                </td>
+     
+             </tr>
+             <tr>
+                <td><i class="fa fa-square" id="square13"  ></i>
+                    <p>Tôi luôn suy nghĩ kỹ trước khi nói
+                    </p>
+                </td>
+                 <td><div id="rectangle14" class="rectangle" ></div>
+                     <p>Tôi không thích hứa hẹn hoặc cam kết điều gì</p>
+                 </td>
+                 <td><i class="fa fa-square" id="square14"  ></i>
+                    <p>Tôi thích làm việc một mình
+                    </p>
+                </td>
+             </tr>
+             <tr>
+                <td><i class="fa fa-circle" id="circle14"  ></i><br>
+                    <p>Tôi là một người giỏi xã giao</p>            
+                </td>
+                <td><i class="fa fa-square" id="square15"  ></i>
+                    <p>Tôi là một người bạn rất trung thành
+                    </p>
+                </td>
+                <td><div id="thunder13" class="thunder" ></div>
+                    <p>Thỉnh thoảng tôi chinh phục người khác bằng khả năng và nhiệt huyết của tôi</p>
+                </td>
+             </tr>
+            
+             <tr>
+                 <td><div id="triangle14" class="triangle" ></div>
+                     <p>Tôi không e ngại nói thẳng ra những chủ kiến của mình</p>
+                 </td>
+                 <td><div id="thunder14" class="thunder" ></div>
+                    <p>Tôi dễ thay đổi trong các mối quan hệ của mình</p>
+                </td>
+                <td><i class="fa fa-circle" id="circle15"  ></i><br>
+                    <p>Nếu bạn cần, tôi sẽ cố gắng hết sức để giúp bạn</p>            
+                </td>
+             </tr>   
+             <tr>
+                <td><div id="rectangle15" class="rectangle" ></div>
+                    <p>Tôi ghét bị đặt vào những tình thế khó xử</p>
+                </td>
+                <td><div id="triangle15" class="triangle" ></div>
+                    <p>Tôi là tấm gương cho nhiều người</p>
+                </td>
+                <td><div id="triangle16" class="triangle" ></div>
+                    <p>Tôi là tấm gương cho nhiều người</p>
+                </td>
+             </tr>   
+             <tr>
+                <td><div id="thunder15" class="thunder" ></div>
+                    <p>Tôi nghĩ gì nói đó</p>
+                </td>
+                 <td><div id="thunder16" class="thunder" ></div>
+                    <p>Tôi nghĩ gì nói đó</p>
+                </td>
+                <td><div id="rectangle16" class="rectangle" ></div>
+                    <p>Lúc này tôi đang cần một người hướng dẫn, cố vấn cho tôi</p>
+                </td>
+             </tr>   
+             <tr>
+                <td><i class="fa fa-circle" id="circle16"  ></i><br>
+                    <p>Tôi thích nói chuyện và chia sẻ với mọi người</p>            
+                </td>
+                <td><i class="fa fa-square" id="square16"  ></i>
+                    <p>Tôi rất kiên định, một khi đã quyết định thì tôi sẽ theo đuổi đến cùng
+                    </p>
+                </td>
+                <td><div id="thunder17" class="thunder" ></div>
+                    <p>Tôi hay thiếu kiên nhẫn và thường ngắt lời người khác</p>
+                </td>
+             </tr>   
+             <tr>
+                <td><i class="fa fa-square" id="square17"  ></i>
+                    <p>Tôi không thích thể hiện tình cảm trước đám đông
+                    </p>
+                </td>
+                <td><div id="triangle17" class="triangle" ></div>
+                    <p>Tôi biết tận dụng tình thế, mối quan hệ để đạt được mục tiêu của mình</p>
+                </td>
+                <td><i class="fa fa-circle" id="circle17"  ></i><br>
+                    <p>Thỉnh thoảng tôi cảm thấy như mình bị lợi dụng</p>            
+                </td>
+             </tr>   
+     
+         </table>
+     
+ 
+     </table>
+    <br><hr><br>
+    <h1 style="text-align: center;">THỐNG KÊ ĐIỂM</h1>
+    <table id="end" cellspacing="0" cellpadding="0" class="noneboder" align="center">
+        <th><i class="fa fa-circle" style="font-size: 100px; color: green;" ></i><p>Số Hình Tròn Là:<h1><div id="circle_count"></h1></div></p></th>
+        <th><i class="fa fa-square" style="font-size: 100px; color: skyblue;"></i><p>Số Hình Vuông Là:<h1><div id="square_count"></h1></div></p></th>
+        <th><div class="triangle" style=" background-color: red;"></div><p>Số Hình Tam Giác Là:<h1><div id="triangle_count"></h1></div></p></th>
+        <th><div class="thunder" style=" background-color: yellow;"></div><p>Số Hình Sấm Chớp Là:<h1><div id="thunder_count"></h1></div></p></th>
+        <th><div class="rectangle" style=" background-color: purple;"></div><p>Số Hình Chữ nhật Là:<h1><div id="rectangle_count"></h1></div></p></th>
+    </table>
+    
+  
+
+    <script>
+        // Mouse In-Out Starting:
+        // 1.Circle Start: 
+
+
+          (function() {
+            const heart = document.getElementById('circle');
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('green');
+               
+                var arr=document.querySelectorAll('.green').length;
+            document.getElementById("circle_count").innerHTML=arr;                   
+            });
+          })();
+          (function() {
+          for (i=1;i<=17;i++){    
+            const circle = document.getElementById('circle'+i);
+            circle.addEventListener('click', function() {
+               circle.classList.toggle('green');
+               var arr=document.querySelectorAll(' .green').length;
+            document.getElementById("circle_count").innerHTML=arr;
+            });
+        }
+        })();
+
+           // 1.Circle End
+            //2.Square Start:
+          
+          (function() {
+            const circle = document.getElementById('square');
+            circle.addEventListener('click', function() {
+               circle.classList.toggle('blue');
+               var arr=document.querySelectorAll(' .blue').length;
+            document.getElementById("square_count").innerHTML=arr;
+            });
+        })();
+   
+       
+        (function() {
+            for(i=1;i<=17;i++){
+            const circle = document.getElementById('square'+i);
+            circle.addEventListener('click', function() {
+               circle.classList.toggle('blue');
+               var arr=document.querySelectorAll(' .blue').length;
+            document.getElementById("square_count").innerHTML=arr;
+            });
+        }
+        })();
+
+           //2.Square End
+        //3.Triangle Star:
+        (function() {
+            const heart = document.getElementById('triangle');
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('red');
+                var arr=document.querySelectorAll('.red').length;
+            document.getElementById("triangle_count").innerHTML=arr;                   
+            });
+          })();
+          (function() {
+            for(i=1;i<=17;i++){  
+            const heart = document.getElementById('triangle'+i);
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('red');
+                var arr=document.querySelectorAll('.red').length;
+            document.getElementById("triangle_count").innerHTML=arr;                   
+            });
+        }
+          })();
+        
+        //3.Triangle End
+        //4.Thunder Star
+        (function() {
+            const heart = document.getElementById('thunder');
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('yellow');
+                var arr=document.querySelectorAll('.yellow').length;
+            document.getElementById("thunder_count").innerHTML=arr;                   
+            });
+          })();
+          (function() {
+            for(i=1;i<=17;i++){    
+            const heart = document.getElementById('thunder'+i);
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('yellow');
+                var arr=document.querySelectorAll('.yellow').length;
+            document.getElementById("thunder_count").innerHTML=arr;                   
+            });
+            }
+          })();
+
+        //4.Thunder End
+        //5.Rectangle Start  
+        (function() {
+            const heart = document.getElementById('rectangle');
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('purple');
+                var arr=document.querySelectorAll('.purple').length;
+            document.getElementById("rectangle_count").innerHTML=arr;                   
+            });
+          })();
+          (function() {
+            for(i=1;i<17;i++){    
+            const heart = document.getElementById('rectangle'+i);
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('purple');
+                var arr=document.querySelectorAll('.purple').length;
+            document.getElementById("rectangle_count").innerHTML=arr;                   
+            });
+        }
+          })();
+        //5.Recangle End
+        //Global Rules:
+        function check(){
+            var a=document.querySelectorAll('.green').length;
+            var b=document.querySelectorAll('.blue').length;
+            var c=document.querySelectorAll('.red').length;
+            var d=document.querySelectorAll('.yellow').length;
+            var e=document.querySelectorAll('.purple').length;
+            jsarray = [a,b,c,d,e];
+            sessionStorage.setItem("jsArray", JSON.stringify(jsarray));
+            console.log(jsarray);
+            if(a+b+c+d+e>7)
+            {
+                alert("You Can Choose Only 7 Simple!!!")
+                
+                return;
+            }
+          }
+          ////click show/hide Function
+        
+                    function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+            
+            }
+                    
+    </script>
+</body>
+</html>

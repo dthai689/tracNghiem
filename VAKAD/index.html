@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>VAKAD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+
+<style>
+
+
+@media only screen and (max-width: 600px) {
+	#msform {
+		width: 100%;
+		margin: 50px auto;
+		text-align: center;
+		position: relative;
+	}
+	
+  }
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+p h1 h2 h3 {
+	text-indent: 100px;
+  }
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo*/
+	background: 
+		linear-gradient(#000936, #000936);
+		height:auto;
+}
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+body {
+	font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+
+#msform {
+	width: 1200px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	border-radius: 2.5em;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #ff7200;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 15px 10px;
+	margin: 10px 5px;
+	border-radius: 1em;
+	margin-top: 25px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #efaa65;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	height:max-content;
+	margin-bottom: 30px;
+	overflow: hidden;
+   
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 15px;
+	width: 20%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #ff7200;
+	color: white;
+}
+/* 
+-------------------------------------------- */
+/* hide item */
+
+.none{
+    display: none;
+}
+        /* Mobile */
+@media (hover: hover) { 
+  circle:hover {
+    color: grey;  
+    font-size: 100px;
+  }
+}
+       /* Desktop */
+  
+        
+        table {
+  width: 100%;
+  
+  
+}
+    table, th, td {
+  border: 2px solid;
+  cursor: pointer;
+  
+}
+td {
+  text-align: center;
+}
+.center {
+   
+  margin-left: auto;
+  margin-right: auto;
+}
+    /* Circle Section */
+        .circle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(circle.svg) no-repeat center;
+            mask: url(logo.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .circle:hover,.circle:focus,.circle:active {
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: green;
+            -webkit-mask: url(circle.svg) no-repeat center;
+            mask: url(circle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #circle.green,#circle1.green,#circle2.green,#circle3.green,#circle4.green,#circle5.green,#circle6.green,#circle7.green,#circle8.green,#circle9.green,#circle10.green,#circle11.green,#circle12.green,#circle13.green,#circle14.green,#circle15.green,#circle16.green,#circle17.green{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: green;
+            -webkit-mask: url(circle.svg) no-repeat center;
+            mask: url(circle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+       
+ 
+       /* Square v2 */
+       .square{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(square.svg) no-repeat center;
+            mask: url(logo.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .square:hover,.square:focus,.square:active {
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: skyblue;
+            -webkit-mask: url(square.svg) no-repeat center;
+            mask: url(square.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #square.blue,#square1.blue,#square2.blue,#square3.blue,#square4.blue,#square5.blue,#square6.blue,#square7.blue,#square8.blue,#square9.blue,#square10.blue,#square11.blue,#square12.blue,#square13.blue,#square14.blue,#square15.blue,#square16.blue,#square17.blue{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: skyblue;
+            -webkit-mask: url(square.svg) no-repeat center;
+            mask: url(square.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+
+
+    /* Triangle Section     */
+        .triangle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(logo.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .triangle:hover,.triangle:focus,.triangle:active {
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: red;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(triangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #triangle.red,#triangle1.red,#triangle2.red,#triangle3.red,#triangle4.red,#triangle5.red,#triangle6.red,#triangle7.red,#triangle8.red,#triangle9.red,#triangle10.red,#triangle11.red,#triangle12.red,#triangle13.red,#triangle14.red,#triangle15.red,#triangle16.red,#triangle17.red{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: red;
+            -webkit-mask: url(triangle.svg) no-repeat center;
+            mask: url(triangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+      /* Thunder Section */
+      .thunder{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+             display: inline-block;
+      }
+      .thunder:hover{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: yellow;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      #thunder.yellow,#thunder1.yellow,#thunder2.yellow,#thunder3.yellow,#thunder4.yellow,#thunder5.yellow,#thunder6.yellow,#thunder7.yellow,#thunder8.yellow,#thunder9.yellow,#thunder10.yellow,#thunder11.yellow,#thunder12.yellow,#thunder13.yellow,#thunder14.yellow,#thunder15.yellow,#thunder16.yellow,#thunder17.yellow{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: yellow;
+            -webkit-mask: url(thunder.svg) no-repeat center;
+            mask: url(thunder.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      /* Rectangle Section */
+      .rectangle{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: grey;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+             display: inline-block;
+      }
+      .rectangle:hover{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: purple;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+      #rectangle.purple,#rectangle1.purple,#rectangle2.purple,#rectangle3.purple,#rectangle4.purple,#rectangle5.purple,#rectangle6.purple,#rectangle7.purple,#rectangle8.purple,#rectangle9.purple,#rectangle10.purple,#rectangle11.purple,#rectangle12.purple,#rectangle13.purple,#rectangle14.purple,#rectangle15.purple,#rectangle16.purple,#rectangle17.purple{
+            width: 90px;
+            height: 90px;
+            margin-top: 4px;
+            background-color: purple;
+            -webkit-mask: url(rectangle.svg) no-repeat center;
+            mask: url(rectangle.svg) no-repeat center;
+            vertical-align: middle;
+            display: inline-block;
+      }
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- multistep form -->
+<form autocomplete="false" role="form" method="post" action="https://happyclick.vn/form/submit?formId=93" id="msform" data-mautic-form="tracnghiemvakadmoi" enctype="multipart/form-data">
+    <img src="./logo.png" class="center" style="margin-left: auto;margin-right: auto; width: 10%;"> <br><br><br>
+  <!-- progressbar -->
+  <ul id="progressbar" style="justify-content: center;
+  display: flex;">
+    <li class="active">Bắt Đầu</li>
+    <li>Bảng Câu Hỏi</li>
+    
+    <li>Kết Thúc</li>
+   
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <br><h1 style="text-align: center; font-size: 30px; color: rgb(4, 4, 116);font-weight: bold;">Trắc Nghiệm VAKAD </h1><br><hr><br>
+
+    <p>Hãy cho điểm theo thang điểm cho từng đáp án theo tiêu chí dưới đây. Mỗi câu hỏi có 4 câu nhận định và 4 cột điểm 1,2,3,4: các Anh Chị thấy câu nào phù hợp để mô tả mình nhất trong 4 câu thì cho 4 điểm, câu nào ít phù hợp nhất để mô tả mình trong 4 câu thì cho 1 điểm, 2 câu còn lại các Anh Chị thấy câu nào ít phù hợp hơn thì cho 2 điểm, câu còn lại là 3 điểm. Mỗi cột điểm chỉ được chọn DUY NHẤT 1 lần trong 1 câu hỏi. Tổng điểm cho mỗi câu đúng sẽ là 10 điểm (4+3+2+1)Cảm ơn các Anh Chị thật nhiều.</p><br>
+    <hr><hr><br>
+    <table>
+        <tr style="background-color:#f37821;color:white">
+            <td></td>
+            <td>Ít Đúng Nhất( 1 điểm) </td>
+            <td>Miêu Tả Khá Đúng (2 điểm)</td>
+            <td>Miêu Tả Đúng (3 điểm)</td>
+            <td>Miêu Tả Đúng Nhất (4 điểm)</td>
+        
+           
+            
+        </tr>
+        <tr >
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 1</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" ></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+        </tr>
+        <tr>
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 2</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+        </tr>
+        <tr>
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 3</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+        </tr>
+        <tr>
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 4</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+        </tr>
+        
+    </table>
+    <h1></h1><span style="text-align: center;color:red;"><br><strong>Câu Trả Lời Hợp Lệ</strong></span></h1><br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <table style="background-color: rgb(211, 211, 211);opacity: 70%;">
+        <tr style="background-color:#f37821;color:white">
+            <td></td>
+            <td>Ít Đúng Nhất( 1 điểm) </td>
+            <td>Miêu Tả Khá Đúng (2 điểm)</td>
+            <td>Miêu Tả Đúng (3 điểm)</td>
+            <td>Miêu Tả Đúng Nhất (4 điểm)</td>
+        </tr>
+        <tr >
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 1</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+        </tr>
+        <tr>
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 2</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+        </tr>
+        <tr>
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 3</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+        </tr>
+        <tr>
+            <td style="background-color: #010A37;color:white;"><br>Câu Hỏi Thứ 4</td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked></td>
+            <td><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" ></td>
+        </tr>
+        
+    </table>
+    <h1></h1><span style="text-align: center; "><br><strong>Câu Trả Lời Không Hợp Lệ</strong></span></h1><br>
+    <input type="button" name="next" class="next action-button" value="Bắt Đầu" />
+  </fieldset>
+  <fieldset>
+
+
+           
+               
+    <table id="partA" class="center">
+        <tr style="background-color: #ff7200;color:white;height:3em">
+            <td></td>
+            <td class="td_center">1 điểm</td>
+            <td class="td_center">2 điểm</td>
+            <td class="td_center">3 điểm</td>
+            <td class="td_center">4 điểm </td>
+        </tr>
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 1 : Bạn thường đưa ra quyết định quan trọng dựa trên?</td>
+    </tr>
+    <tr>
+        <td>K - Cảm tính</td>
+        <td style="width:20%;"><br><input type="checkbox" id="K_check1"  name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="K_check4" name="K" value="4"></td>
+    </tr>
+    <tr>
+        <td>A - Những điều mà người khác nói</td>
+        <td style="width:20%;"><br><input type="checkbox" id="A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Những điều mà (mình nhìn thấy) bạn cho là tốt nhất cho bản thân</td>
+      
+        <td style="width:20%;"><br><input type="checkbox" id="V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="V_check4" name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Những thông tin, dẫn chứng cụ thể</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 2: Trong các buổi tranh luận, bạn dễ bị tác động nhất bởi:</td>
+    </tr>
+    <tr>
+        <td>A - Giọng nói của người khác</td>
+        <td style="width:20%;"><br><input type="checkbox" id="2A_check1" name="A"  value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2A_check2" name="A"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2A_check3" name="A"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2A_check4" name="A"  value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Liệu bạn có thể nhìn thấy quan điểm của người khác hay không</td>
+      
+        <td style="width:20%;"><br><input type="checkbox" id="2V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2V_check4" name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Tính logic trong lời tranh luận của người khác</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="2AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Cảm xúc của người khác</td>
+        <td style="width:20%;"><br><input type="checkbox" id="2K_check1"  name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2K_check2" name="K"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2K_check3" name="K"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="2K_check4" name="K"  value="4"></td>
+    </tr>
+    
+   
+   
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 3: Điều bạn hài lòng nhất ở bản thân là:</td>
+    </tr>
+    <tr>
+        <td>V - Liệu bạn có thể nhìn thấy quan điểm của người khác hay không</td>
+        <td style="width:20%;"><br><input type="checkbox" id="3V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3V_check4" name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Cảm xúc của người khác</td>
+        <td style="width:20%;"><br><input type="checkbox" id="3K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3K_check4" name="K" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Tính logic trong lời tranh luận của người khác</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="3AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3AD_check4"name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>A - Giọng nói của người khác</td>
+        <td style="width:20%;"><br><input type="checkbox" id="3A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="3A_check4"name="A" value="4"></td>
+    </tr>
+    <tr>
+   
+   
+ 
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 4: Bạn thấy thật dễ dàng</td>
+    </tr>
+    <tr>
+        <td>A - Điều chỉnh âm lượng và giai điệu âm thanh của bài hát sao cho hay nhất</td>
+        <td style="width:20%;"><br><input type="checkbox" id="4A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4A_check2" name="A"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Chọn lựa những thông tin có giá trị nhất trong 1 chủ đề</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="4AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Chọn những đồ đạc bạn thấy thoải mái nhất</td>
+        <td style="width:20%;"><br><input type="checkbox" id="4K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4K_check4" name="K" value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Chọn những đồ có sự kết hợp màu sắc hài hòa và bắt mắt nhất</td>
+        <td style="width:20%;"><br><input type="checkbox" id="4V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="4V_check4" name="V" value="4"></td>
+    </tr>
+    <tr> 
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 5: Bạn </td>
+    </tr>
+    <tr>
+        <td>A - Nhạy cảm với những âm thanh xung quanh</td>
+        <td style="width:20%;"><br><input type="checkbox" id="5A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Rất nhạy bén với thông tin mới</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="5AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5AD_check2" name="AD"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5AD_check3" name="AD"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5AD_check4" name="AD"  value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Rất nhạy cảm với nhưng đồ bạn đang mặc</td>
+        <td style="width:20%;"><br><input type="checkbox" id="5K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5K_check4" name="K" value="4"></td>
+    </tr>
+    <tr>
+        <td>V -  Phản ứng nhanh với màu sắc và bề ngoài của sự vật</td>
+        <td style="width:20%;"><br><input type="checkbox" id="5V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5V_check3" name="V"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="5V_check4" name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 6: Khi có một kỳ nghỉ ở bờ biển thì việc thích làm nhất ở đó là gì </td>
+    </tr>
+    <tr>
+        <td>K - Cảm nhận bờ cát tuyệt vời với nắng ấm và cảm giác mát lạnh trên khuôn mặt</td>
+        <td style="width:20%;"><br><input type="checkbox" id="6K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6K_check2" name="K"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6K_check4" name="K"  value="4"></td>
+    </tr>
+    <tr>
+        <td>A - Nghe được tiếng vỗ của sóng, tiếng rít nhè nhẹ của gió và tiếng chi hót đằng xa</td>
+        <td style="width:20%;"><br><input type="checkbox" id="6A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6A_check2"  name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6A_check3"  name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6A_check4"  name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Cảm nhận đó là một kỳ nghỉ thông minh với chi phí hợp lý</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="6AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6D_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Phong cảnh ở đó với mặt trời sáng chói và mặt biển xanh biếc</td>
+      
+        <td style="width:20%;"><br><input type="checkbox" id="6V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6V_check2"  name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6V_check3"  name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="6V_check4"  name="V" value="4"></td>
+    </tr>
+    
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 7: Khi có bài tập hay dự án mà bạn đc giao thì thật dễ dàng khi bạn </td>
+    </tr>
+    <tr>
+        <td>V - Có thể nhìn thấy hình ảnh mô tả cái mà được yêu cầu phải làm</td>
+        <td style="width:20%;"><br><input type="checkbox" id="7V_check1"  name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7V_check2"  name="V"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7V_check3"  name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7V_check4"  name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Có thể nghe được gợi ý về công việc sắp phải làm</td>
+        <td style="width:20%;"><br><input type="checkbox" id="7K_check1"  name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7K_check4" name="K" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Có thể hiểu cái mà được yêu cầu</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="7AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7AD_check3" name="AD"value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>A - Tôi đã điều chỉnh thành những gì cần thiết cho tôi</td>
+        <td style="width:20%;"><br><input type="checkbox" id="7A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="7A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 8: Tôi có thể dễ dàng theo dõi một bài thuyết trình nếu được </td>
+    </tr>
+    <tr>
+        <td>K - Tôi có khả năng tiếp xúc với người diễn giả</td>
+        <td style="width:20%;"><br><input type="checkbox" id="8K_check1"  name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8K_check2"  name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8K_check3"  name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8K_check4"  name="K"  value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Tôi có thể nhìn được hình ảnh từ máy chiếu và theo dõi được chủ đề buổi nói</td>
+        <td style="width:20%;"><br><input type="checkbox" id="8V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8V_check2"  name="V"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8V_check3"  name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8V_check4"  name="V" value="4"></td>
+    </tr>
+    
+    <tr>
+        <td>AD - Buổi thuyết trình có số liệu thực tế và một chút phân tích từ người diễn giả</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="8AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>A - Người thuyết trình có giọng nói rõ ràng với rất nhiều tông giọng khác nhau và sử dụng các từ ngữ mạnh</td>
+        <td style="width:20%;"><br><input type="checkbox" id="8A_check1"  name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8A_check2"  name="A"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8A_check3"  name="A"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="8A_check4"  name="A"  value="4"></td>
+    </tr>
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 9: Khi mua xe thì tôi quyết định lựa chọn dựa trên </td>
+    </tr>
+    <tr>
+        <td>AD - Dựa trên giá cả, tiêu thụ xăng, và các tính năng an toàn trên xe</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="9AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9AD_check4" name="AD"value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Sự thoải mái của ghế ngồi và cảm giác thoải mái khi lái thử nó</td>
+        <td style="width:20%;"><br><input type="checkbox" id="9K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9K_check2" name="K"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9K_check3" name="K"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9K_check4" name="K"  value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Màu sắc của chiếc xe, phong cách thiết kế và hình ảnh khi tối lái nó</td>
+        <td style="width:20%;"><br><input type="checkbox" id="9V_check1" name="V"  value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9V_check4" name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>A - Âm thanh giòn tan của động cơ và dàn âm thanh trên xe cũng như độ cách âm của xe</td>
+        <td style="width:20%;"><br><input type="checkbox" id="9A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="9A_check4" name="A" value="4"></td>
+    </tr>
+   
+   
+    
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 10: Khi tham dự một buổi trình diễn ca nhạc trực tiếp thì tôi hay</td>
+    </tr>
+    <tr>
+        <td>A -  Bị cuốn theo giai điệu của bài hát</td>
+        <td style="width:20%;"><br><input type="checkbox" id="10A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10A_check2" name="A"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>V -  Để ý nhiều đến phần trình diễn của ca sỹ, ban nhạc</td>
+        <td style="width:20%;"><br><input type="checkbox" id="10V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10V_check2"  name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10V_check3"  name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10V_check4"  name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Để ý nhiều đến ý nghĩa của lời bài hát</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="10AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Được hòa vào đám đông để nhảy múa</td>
+        <td style="width:20%;"><br><input type="checkbox" id="10K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="10K_check4"name="K" value="4"></td>
+    </tr>
+    
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 11: Khi tôi lo lắng một điều gì đó, điều đầu tiên xảy ra là</td>
+    </tr>
+    <tr>
+        <td>A - Tôi thấy mọi thứ trở nên nghe khác lạ</td>
+        <td style="width:20%;"><br><input type="checkbox" id="11A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Tôi cảm nhận thấy mọi thứ trở nên khác lạ </td>
+        <td style="width:20%;"><br><input type="checkbox" id="11K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11K_check2" name="K"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11K_check4" name="K" value="4"></td>
+    </tr>
+    <tr>
+        <td>V -  Tôi cảm thấy mọi thứ trở nên trông rất lạ thường</td>
+        <td style="width:20%;"><br><input type="checkbox" id="11V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11V_check4" name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Tôi thấy mọi thứ trở nên không hợp lý</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="11AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="11AD_check4" name="AD" value="4"></td>
+    </tr>
+  
+    
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 12: Trong cuộc thảo luận, tôi thường bị ảnh hưởng bởi</td>
+    </tr>
+    
+    <tr>
+        <td>AD - Những lý lẽ của người khác</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="12AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>A -  Giọng điệu của người khác</td>
+        <td style="width:20%;"><br><input type="checkbox" id="12A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12A_check2"  name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12A_check3"  name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12A_check4"  name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>K -  Năng lượng tỏa ra từ người khác</td>
+        <td style="width:20%;"><br><input type="checkbox" id="12K_check1" name="K"  value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12K_check2"  name="K"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12K_check3"  name="K"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12K_check4"  name="K"  value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Ngôn ngữ cơ thể của người khác hoặc những quan điểm của người khác đưa ra</td>
+        <td style="width:20%;"><br><input type="checkbox" id="12V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12V_check2" name="V"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="12V_check4" name="V" value="4"></td>
+    </tr>
+   
+   
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 13: Tôi đánh giá khả năng làm việc của tôi như thế nào dựa trên</td>
+    </tr>
+    <tr>
+        <td>AD - Tôi biết cần phải làm những gì để hoàn thành công việc</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="13AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13AD_check4" name="AD" value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Tôi thấy được rõ rệt sự tiến bộ của tôi</td>
+        <td style="width:20%;"><br><input type="checkbox" id="13V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13V_check2" name="V"   value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13V_check3" name="V"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13V_check4" name="V"  value="4"></td>
+    </tr>
+    <tr>
+        <td>A - Mọi thứ nghe như thế nào</td>
+        <td style="width:20%;"><br><input type="checkbox" id="13A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Tôi cảm thấy hài lòng như thế nào</td>
+        <td style="width:20%;"><br><input type="checkbox" id="13K_check1" name="K"  value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="13K_check4" name="K" value="4"></td>
+    </tr>
+  
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 14: Một trong những điểm mạnh của tôi là khả năng của mình để</td>
+    </tr>
+    <tr>
+        <td>V - Xem những gì cần phải thực hiện</td>
+        <td style="width:20%;"><br><input type="checkbox" id="14V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14V_check4" name="V" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD - Phân tích được số liệu, dữ liệu thống kê thực tế</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="14AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14AD_check4" name="AD" value="4"></td>
+    </tr>
+   
+    <tr>
+        <td>A - Biết được những gì là đúng</td>
+        <td style="width:20%;"><br><input type="checkbox" id="14A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>K - Tin tưởng vào cảm nhận của mình</td>
+        <td style="width:20%;"><br><input type="checkbox" id="14K_check1" name="K"  value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14K_check2" name="K"  value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14K_check3" name="K"  value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="14K_check4" name="K"  value="4"></td>
+    </tr>
+    <tr>
+        <td colspan="5" style="background-color: rgb(21, 0, 139);color:white">CÂU 15: Tôi thích</td>
+    </tr>
+    <tr>
+        <td>A -   Việc lựa chọn bản nhạc để nghe</td>
+        <td style="width:20%;"><br><input type="checkbox" id="15A_check1" name="A" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15A_check2" name="A" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15A_check3" name="A" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15A_check4" name="A" value="4"></td>
+    </tr>
+    <tr>
+        <td>AD -  Làm việc theo logic</td>
+     
+        <td style="width:20%;"><br><input type="checkbox" id="15AD_check1" name="AD" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15AD_check2" name="AD" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15AD_check3" name="AD" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15AD_check4" name="AD" value="4"></td>
+    </tr>
+
+    <tr>
+        <td>K -  Lựa chọn trang phục cảm thấy thoải mái</td>
+        <td style="width:20%;"><br><input type="checkbox" id="15K_check1" name="K" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15K_check2" name="K" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15K_check3" name="K" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15K_check4" name="K" value="4"></td>
+    </tr>
+    <tr>
+        <td>V - Lựa chọn trang phục trông dễ nhìn</td>
+        <td style="width:20%;"><br><input type="checkbox" id="15V_check1" name="V" value="1"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15V_check2" name="V" value="2"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15V_check3" name="V" value="3"></td>
+        <td  style="width:20%;"><br><input type="checkbox" id="15V_check4" name="V" value="4"></td>
+    </tr>
+
+  </table>
+  
+ 
+    <input id="btn1_prev" type="button" name="previous" class="previous action-button none" value="Previous" />
+    <input id="btn1" type="button" name="next" class="next action-button" value="Tiếp Tục" />
+  </fieldset>
+
+  <fieldset>
+    <table id="end" cellspacing="0" cellpadding="0" class="noneboder center" align="center">
+        <th><p>(K) Cảm xúc</p></th>
+        <th><p>(V) Thị giác</p></th>
+        <th><p>(A) Thính giác </p></th>
+        <th><p>(Ad) Nội tâm</p></th>
+        <tr>
+            <td><h1><div id="circle_count"></h1></div></td>
+            <td><h1><div id="square_count"></h1></div></td>
+            <td><h1><div id="triangle_count"></h1></div></td>
+            <td><h1><div id="thunder_count"></h1></div></td>
+        </tr>
+    </table>
+    <br><hr><br>    
+    <h2 class="fs-title">Vui Lòng Để Lại Email để được nhận kết Quả</h2>
+    <h3 class="fs-subtitle">Chúng Tôi Sẽ Không Chia Sẽ Email Của Bạn Ra Ngoài</h3>
+    <div class="mauticform-error" id="mauticform_tracnghiemvakadmoi_error"></div>
+        <div class="mauticform-message" id="mauticform_tracnghiemvakadmoi_message"></div>
+        <div class="mauticform-innerform">
+
+            
+          <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+
+            <div id="mauticform_tracnghiemvakadmoi_ho_ten" data-validate="ho_ten" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required">
+                <label id="mauticform_label_tracnghiemvakad_ho_ten" for="mauticform_input_tracnghiemvakadmoi_ho_ten" class="mauticform-label">Họ tên</label>
+                <input id="mauticform_input_tracnghiemvakadmoi_ho_ten" name="mauticform[ho_ten]" value="" class="mauticform-input" type="text">
+                <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+            </div>
+
+            <div id="mauticform_tracnghiemvakadmoi_email" data-validate="email" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-2 mauticform-required">
+                <label id="mauticform_label_tracnghiemvakad_email" for="mauticform_input_tracnghiemvakadmoi_email" class="mauticform-label">Email</label>
+                <input id="mauticform_input_tracnghiemvakadmoi_email" name="mauticform[email]" value="" class="mauticform-input" type="email">
+                <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+            </div>
+
+                <input id="mauticform_input_tracnghiemvakadmoi_circle" name="mauticform[circle]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemvakadmoi_square" name="mauticform[square]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemvakadmoi_triangle" name="mauticform[triangle]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemvakadmoi_thunder" name="mauticform[thunder]" value="" class="mauticform-hidden" type="hidden">
+                <input id="mauticform_input_tracnghiemvakadmoi_rectangle" name="mauticform[rectangle]" value="" class="mauticform-hidden" type="hidden">
+                <div id="mauticform_tracnghiemvakadmoi_so_dien_thoai" class="mauticform-row mauticform-tel mauticform-field-8">
+                    <label id="mauticform_label_tracnghiemvakad_so_dien_thoai" for="mauticform_input_tracnghiemvakadmoi_so_dien_thoai" class="mauticform-label">Số Điện Thoại</label>
+                    <input id="mauticform_input_tracnghiemvakadmoi_so_dien_thoai" name="mauticform[so_dien_thoai]" value="" class="mauticform-input" type="tel">
+                    <span class="mauticform-errormsg" style="display: none;"></span>
+                </div>
+    
+                <div id="mauticform_tracnghiemvakadmoi_ten_cong_ty" class="mauticform-row mauticform-text mauticform-field-9">
+                    <label id="mauticform_label_tracnghiemvakad_ten_cong_ty" for="mauticform_input_tracnghiemvakadmoi_ten_cong_ty" class="mauticform-label">Tên Công Ty</label>
+                    <input id="mauticform_input_tracnghiemvakadmoi_ten_cong_ty" name="mauticform[ten_cong_ty]" value="" class="mauticform-input" type="text">
+                    <span class="mauticform-errormsg" style="display: none;"></span>
+                </div>
+            <div id="mauticform_tracnghiemvakadmoi_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-8">
+                <button type="submit" name="mauticform[submit]" id="mauticform_input_tracnghiemvakadmoi_submit" value="" class="mauticform-button action-button ">Kết Thúc</button>
+            </div>
+            </div>
+        </div>
+
+        <input type="hidden" name="mauticform[formId]" id="mauticform_tracnghiemvakadmoi_id" value="93">
+        <input type="hidden" name="mauticform[return]" id="mauticform_tracnghiemvakadmoi_return" value="">
+        <input type="hidden" name="mauticform[formName]" id="mauticform_tracnghiemvakadmoi_name" value="tracnghiemvakadmoi">
+
+   
+  </fieldset>
+  
+</form>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+<script>
+    $(document).ready(function() {
+        $("#btn1").click(function(){
+            var V_sum=0;
+            var K_sum=0;
+            var A_sum=0;
+            var AD_sum=0;
+            var K_result= [];
+            var V_result= [];
+            var A_result= [];
+            var AD_result = [];
+            $.each($("input[name='K']:checked"), function(){
+                K_result.push($(this).val());
+            });
+            $.each($("input[name='V']:checked"), function(){
+                V_result.push($(this).val());
+            });
+            $.each($("input[name='A']:checked"), function(){
+                A_result.push($(this).val());
+            });
+            $.each($("input[name='AD']:checked"), function(){
+                AD_result.push($(this).val());
+            });
+            //Sum of K
+            $.each(K_result, function() {
+            K_sum += parseFloat(this) || 0;
+                
+             });
+             document.getElementById("mauticform_input_tracnghiemvakadmoi_circle").value=K_sum; 
+
+            $("#circle_count").append(K_sum);
+            
+             //Sum of V
+             $.each(V_result, function() {
+            V_sum += parseFloat(this) || 0;
+             });
+             $("#square_count").append(V_sum);
+             document.getElementById("mauticform_input_tracnghiemvakadmoi_square").value=V_sum; 
+
+            //Sum of A
+            $.each(A_result, function() {
+            A_sum += parseFloat(this) || 0;
+             });
+             $("#triangle_count").append(A_sum);
+             document.getElementById("mauticform_input_tracnghiemvakadmoi_triangle").value=A_sum; 
+ 
+             //Sum of AD
+             $.each(AD_result, function() {
+            AD_sum += parseFloat(this) || 0;
+             });
+             $("#thunder_count").append(AD_sum);
+             document.getElementById("mauticform_input_tracnghiemvakadmoi_thunder").value=AD_sum; 
+        });
+        $('#K_check1,#K_check2,#K_check3,#K_check4').click(function(){
+
+            if ($('#K_check1,#K_check2,#K_check3,#K_check4').is(':checked'))
+                 {
+                    $('#K_check1,#K_check2,#K_check3,#K_check4').not(this).attr("disabled",true)
+                 }
+                 else
+                 {
+                    $('#K_check1,#K_check2,#K_check3,#K_check4').attr("disabled",false)
+                 }     
+        })
+        $('#A_check1,#A_check2,#A_check3,#A_check4').click(function(){
+
+            if ($('#A_check1,#A_check2,#A_check3,#A_check4').is(':checked'))
+                {
+                    $('#A_check1,#A_check2,#A_check3,#A_check4').not(this).attr("disabled",true)
+                }
+                else
+                {
+                    $('#A_check1,#A_check2,#A_check3,#A_check4').attr("disabled",false)
+                }     
+        })
+        $('#V_check1,#V_check2,#V_check3,#V_check4').click(function(){
+
+        if ($('#V_check1,#V_check2,#V_check3,#V_check4').is(':checked'))
+            {
+                $('#V_check1,#V_check2,#V_check3,#V_check4').not(this).attr("disabled",true)
+            }
+            else
+            {
+                $('#V_check1,#V_check2,#V_check3,#V_check4').attr("disabled",false)
+            }     
+    })
+
+    $('#AD_check1,#AD_check2,#AD_check3,#AD_check4').click(function(){
+
+if ($('#AD_check1,#AD_check2,#AD_check3,#AD_check4').is(':checked'))
+     {
+        $('#AD_check1,#AD_check2,#AD_check3,#AD_check4').not(this).attr("disabled",true)
+     }
+     else
+     {
+        $('#AD_check1,#AD_check2,#AD_check3,#AD_check4').attr("disabled",false)
+     }     
+})
+
+    });
+</script>
+<!-- <script>
+$(document).ready(function() {
+    var dong = [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    var cot = [1,2,3,4]
+    $.each(dong, function(i,val){
+        $.each(cot,function(j,value){
+
+        //   $("#"+val+"A_Check"+value).click(function(){
+        //     $("#"+val+"A_Check"+value).not(this).attr("disabled",true)
+
+            alert("#"+val+"A_Check"+value);
+
+        //   })
+        })
+      
+    })
+})
+
+</script> -->
+
+
+<script>
+    //jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+</script>
+</body>
+</html>

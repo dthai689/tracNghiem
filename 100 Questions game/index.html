@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+.mauticform-input{
+  width: 100%;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background:#010A37;
+  color:#010A37;
+}
+input[type = checkbox] {
+           
+            padding: 10px 15px;
+            margin: 5px 0;
+            box-sizing: border-box;
+         }
+#mauticform_tracnghiemphongcachhoc {
+  background-color: #ffffff;
+  background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+  background-repeat: no-repeat;
+  background-image:url(./logo_colorful.png);
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  border-radius: 2.5em;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #F37821;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  border-radius: 1em;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #e5b53b;
+}
+</style>
+<body>
+  <img src="./logo.png" style="margin-left: auto;margin-right: auto; width: 15%;display: block;"> 
+  <form id="mauticform_tracnghiemphongcachhoc" autocomplete="false" action="https://happyclick.vn/form/submit?formId=91" method="post"  data-mautic-form="tracnghiemphongcachhoc" enctype="multipart/form-data">
+   
+    <h1 style="color:#F37821;font-size: xx-large;" >TRẮC NGHỆM: PHONG CÁCH HỌC TẬP CỦA BẠN</h1>
+    <p style="text-align: center;"><i>_D.ART</i></p>
+    <hr>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+
+   
+    <h2 style="color: red;">A. HƯỚNG DẪN</h2>
+    <p style="text-align:justify; ">
+Trong quá trình học tập và tiếp nhận kiến thức, chúng ta vô tình hình thành những thói quen trong phong cách học tập. 
+<br> <br>
+Bài trắc nghiệm dưới đây sẽ giúp bạn xác định phong cách học phù hợp. Bạn cần 15 phút để tập trung trả lời hết tất cả các câu hỏi. <br><br>
+Hãy đánh dấu ☑ vào ô trống nếu bạn “đồng ý”, và nếu không, hãy để trống. <br><br>
+Khi hoàn thành, bài trắc nghiệm sẽ trả kết quả. Phong cách có số điểm cao nhất sẽ là phong cách học tập của bạn.<br><br>
+Lưu ý: Mức độ chính xác của kết quả tùy thuộc vào sự chân thật của bạn trong câu trả lời. Không có câu trả lời đúng, cũng không có câu trả lời sai.<br>
+   </p> 
+    
+   
+Bạn đã sẵn sàng chứ? Chúng ta cùng bắt đầu nhé!
+    
+    <hr />
+  </div>
+  <div class="tab">
+    <input id="item1" name="" type="checkbox" /> &nbsp; 1. Tôi có nhận thức rất rõ ràng về sự việc đúng hoặc sai, tốt hoặc xấu. <br><br>
+    <input id="item2" name="" type="checkbox" /> &nbsp; 2. Tôi không để ý đến những lời cảnh báo<br><br>
+    <input id="item3" name="" type="checkbox" />&nbsp;  3. Tôi thường giải quyết vấn đề theo quy trình từng bước.<br><br>
+    <input id="item4" name="" type="checkbox" /> &nbsp; 4. Tôi cho rằng các thủ tục và điều lệ luôn kềm hãm phong cách sống của bản thân.<br><br>
+    <input id="item5" name="" type="checkbox" /> &nbsp; 5. Tôi nổi tiếng là người thẳng thắn.<br><br>
+    <input id="item6" name="" type="checkbox" /> &nbsp; 6. Tôi tin rằng khi hành động theo cảm tính cũng chính xác không kém những hành động dựa trên sự phân tích và suy nghĩ kỹ càng.<br><br>
+    <input id="item7" name="" type="checkbox" /> &nbsp; 7. Tôi muốn có thời gian để thực hiện công việc theo kiểu “Không còn việc gì mà tôi không đụng tới”<br><br>
+    <input id="item8" name="" type="checkbox" /> &nbsp; 8. Tôi thường chất vấn mọi người về những điều mà họ cho là đúng.<br><br>
+    <input id="item9" name="" type="checkbox" /> &nbsp; 9. Với tôi, hiệu quả công việc là điều quan trọng nhất.<br><br>
+    <input id="item10" name="" type="checkbox" /> &nbsp;10. Tôi chủ động tìm những kinh nghiệm mới từ người khác<br><br>
+    <input id="item11" name="" type="checkbox" />&nbsp; 11. Khi tôi nghe được một ý tưởng hay phương pháp mới, tôi liền nghĩ đến việc làm thế nào để ứng dụng nó trong thực tế.<br><br>
+    <input id="item12" name="" type="checkbox" />&nbsp; 12. Tôi thường bắt mình tuân theo những kỷ luật đặt ra như ăn kiêng, tập thể dục đều đặn, cố định lịch làm việc hàng ngày v.v…<br><br>
+    <input id="item13" name="" type="checkbox" /> &nbsp;13. Tôi thường cảm thấy tự hào khi hoàn chỉnh toàn bộ một công việc nào đó.<br><br>
+    <input id="item14" name="" type="checkbox" /> &nbsp;14. Tôi thích cộng tác với những người làm việc theo phương pháp phân tích lô-gíc hơn là với những người hay có suy nghĩ tự phát, kém lô-gíc.<br><br>
+    <input id="item15" name="" type="checkbox" /> &nbsp;15. Tôi cẩn thận phân tích các dữ liệu có được trước khi quyết định một vấn đề.<br><br>
+    <input id="item16" name="" type="checkbox" /> &nbsp;16. Tôi thường cân nhắc tất cả các phương án trước khi quyết định<br><br>
+    <input id="item17" name="" type="checkbox" />&nbsp; 17. Tôi thường bị thu hút bởi những sáng kiến mới, khác thường hơn là những suy nghĩ thực tế.<br><br>
+    <input id="item18" name="" type="checkbox" /> &nbsp;18. Tôi không thích làm việc ngẫu hứng, và luôn cố gắng sắp xếp công việc theo một trình tự chặt chẽ.<br><br>
+    <input id="item19" name="" type="checkbox" />&nbsp; 19. Tôi chấp nhận và tuân thủ theo những thủ tục và điều lệ đã định vì tôi nhận thấy đó là phương pháp làm việc hiệu quả.<br><br>
+    <input id="item20" name="" type="checkbox" /> &nbsp;20. Tôi thường gắn những hành động của mình với những nguyên lý chung nhất.<br><br>
+    <hr>
+  </div>
+  <div class="tab">
+    <input id="item21" name="" type="checkbox" />&nbsp;21. Trong các cuộc thảo luận, tôi luôn đi thẳng vào vấn đề.<br><br>
+      <input id="item22" name="" type="checkbox" />&nbsp;22. Tôi thường giữ khoảng cách với đồng nghiệp.<br><br>
+      <input id="item23" name="" type="checkbox" />&nbsp;23. Tôi khao khát muốn thử sức mình trong những lãnh vực mới mẻ.<br><br>
+      <input id="item24" name="" type="checkbox" />&nbsp;24. Tôi thích những người vui tính, thoải mái.<br><br>
+      <input id="item25" name="" type="checkbox" />&nbsp;25. Tôi luôn quan tâm nhiều đến các chi tiết của một vấn đề trước khi quyết định.<br><br>
+      <input id="item26" name="" type="checkbox" />&nbsp;26. Tôi thấy khó lòng đưa ra những ý kiến thiếu cân nhắc.<br><br>
+      <input id="item27" name="" type="checkbox" />&nbsp;27. Tôi không thích tốn thời gian bằng cách nói vòng vo.<br><br>
+      <input id="item28" name="" type="checkbox" />&nbsp;28. Tôi tránh các quyết định vội vàng.<br><br>
+      <input id="item29" name="" type="checkbox" />&nbsp;29. Tôi muốn có càng nhiều nguồn thông tin càng tốt.<br><br>
+      <input id="item30" name="" type="checkbox" />&nbsp;30. Tôi rất khó chịu với những người thiếu nghiêm túc trong công việc.<br><br>
+      <input id="item31" name="" type="checkbox" />&nbsp;31. Tôi thường nghe ý kiến của người khác trước khi đưa ra ý kiến của mình.<br><br>
+      <input id="item32" name="" type="checkbox" />&nbsp;32. Tôi không ngại thổ lộ các cảm nhận của mình với mọi người.<br><br>
+      <input id="item33" name="" type="checkbox" />&nbsp;33. Trong các cuộc thảo luận, tôi thích quan sát hành động, cử chỉ của những người tham gia.<br><br>
+      <input id="item34" name="" type="checkbox" />&nbsp;34. Tôi có khuynh hướng tùy cơ úng biến hơn là lên kế hoạch cho mọi việc.<br><br>
+      <input id="item35" name="" type="checkbox" />&nbsp;35. Tôi bị thu hút bởi các phương pháp chuyên môn như phân tích hệ thống, biểu đồ phát triển, chương trình mở rộng chi nhánh, kế hoạch dự phòng v.v…<br><br>
+      <input id="item36" name="" type="checkbox" />&nbsp;36. Tôi luôn lo lắng khi phải hoàn tất công viêc trong một khoảng thời gian hạn hẹp.<br><br>
+      <input id="item37" name="" type="checkbox" />&nbsp;37. Tôi thường đánh giá các ý kiến dựa trên tính thực tiễn của chúng.<br><br>
+      <input id="item38" name="" type="checkbox" />&nbsp;38. Tôi không được thoải mái lắm khi tiếp xúc với những người trầm lặng.<br><br>
+      <input id="item39" name="" type="checkbox" />&nbsp;39. Tôi thường bực mình với những người cứ muốn lao vào công việc.<br><br>
+      <input id="item40" name="" type="checkbox" />&nbsp;40. Hãy tận hưởng cuộc sống hiện tại hơn là mơ mộng về tương lai hay hoài niệm về quá khứ.<br><br>
+      <hr>
+  </div>
+  <div class="tab">
+    <input id="item41" name="" type="checkbox" />&nbsp;41. Tôi nghĩ rằng các quyết định dựa trên các phân tích kỹ lưỡng thường chính xác hơn các quyết định dựa vào trực giác.<br><br>
+      <input id="item42" name="" type="checkbox" />&nbsp;42. Tôi là người cầu toàn.<br><br>
+      <input id="item43" name="" type="checkbox" />&nbsp;43. Trong các cuộc thảo luận tôi thường hăng hái đưa ra những ý kiến vừa nảy sinh trong đầu.<br><br>
+      <input id="item44" name="" type="checkbox" />&nbsp;44. Trong các cuộc họp, tôi thường đưa ra các ý kiến rất thực tế.<br><br>
+      <input id="item45" name="" type="checkbox" />&nbsp;45. Người ta thường không cần tuân theo các luật lệ.<br><br>
+      <input id="item46" name="" type="checkbox" />&nbsp;46. Tôi thích đứng lui vể phía sau để xem xét tất cả mọi viễn cảnh.<br><br>
+      <input id="item47" name="" type="checkbox" />&nbsp;47. Tôi thường nhận ra sự thiếu nhất quán và các điểm yếu trong lập luận của người khác.<br><br>
+      <input id="item48" name="" type="checkbox" />&nbsp;48. Thường thì tôi nói nhiều hơn nghe.<br><br>
+      <input id="item49" name="" type="checkbox" />&nbsp;49. Tôi thường tìm ra những cách tốt hơn, thực tế hơn để thực hiện công việc.<br><br>
+      <input id="item50" name="" type="checkbox" />&nbsp;50. Tôi thích các báo cáo được viết ngắn gọn, thuyết phục, và đi thẳng vào vấn đề.<br><br>
+      <input id="item51" name="" type="checkbox" />&nbsp;51. Tôi tin rằng cách suy nghĩ lô-gic dựa trên lý trí sẽ mang lại hiệu quả.<br><br>
+      <input id="item52" name="" type="checkbox" />&nbsp;52. Tôi có khuynh hướng thảo luận với mọi người về những vấn đề cụ thể hơn là nói chuyện rỗi.<br><br>
+      <input id="item53" name="" type="checkbox" />&nbsp;53. Tôi thích những người “đứng hai chân trên mặt đất” - những người thực tế.<br><br>
+      <input id="item54" name="" type="checkbox" />&nbsp;54. Tôi không thể chịu được những ý kiến lạc đề, không liên quan được đặt ra trong các cuộc thảo luận.<br><br>
+      <input id="item55" name="" type="checkbox" />&nbsp;55. Nếu phải viết báo cáo, tôi sẽ viết nháp nhiều lần trước khi hoàn chỉnh.<br><br>
+      <input id="item56" name="" type="checkbox" />&nbsp;56. Tôi luôn muốn thử các ý tưởng bằng cách để xem chúng có thực hiện được không.<br><br>
+      <input id="item57" name="" type="checkbox" />&nbsp;57. Tôi thường dùng phương pháp lô-gíc để tìm ra câu trả lời hay để giải quyết một vấn đề nào đó.<br><br>
+      <input id="item58" name="" type="checkbox" />&nbsp;58. Tôi là người rất thích phát biểu.<br><br>
+      <input id="item59" name="" type="checkbox" />&nbsp;59. Trong các buổi họp, tôi thường hướng mọi người đi thẳng vào vấn đề, tránh suy đoán lung tung.<br><br>
+      <input id="item60" name="" type="checkbox" />&nbsp;60. Tôi muốn cân nhắc tất cả các giải pháp trước khi quyết định.<br><br>
+      <hr>
+  </div>
+  <div class="tab">
+      <input id="item61" name="" type="checkbox" />&nbsp;61. Tôi thường là người vô tư và khách quan nhất trong các buổi thảo luận.<br><br>
+      <input id="item62" name="" type="checkbox" />&nbsp;62. Trong các buổi thảo luận tôi thường tránh sự chú ý hơn là xung phong nói hết.<br><br>
+      <input id="item63" name="" type="checkbox" />&nbsp;63. Tôi luôn muốn có thể gắn kết các công việc hiện tại vào một kế hoạch lâu dài.<br><br>
+      <input id="item64" name="" type="checkbox" />&nbsp;64. Khi gặp thất bại tôi thường chấp nhận, bỏ qua và xem đó như một kinh nghiệm.<br><br>
+      <input id="item65" name="" type="checkbox" />&nbsp;65. Tôi luôn bác bỏ những ý kiến thiếu suy nghĩ vì chúng thường thiếu thực tế.<br><br>
+      <input id="item66" name="" type="checkbox" />&nbsp;66. Cần suy nghĩ trước khi hành động.<br><br>
+      <input id="item67" name="" type="checkbox" />&nbsp;67. Tôi thường nghe nhiều hơn nói.<br><br>
+      <input id="item68" name="" type="checkbox" />&nbsp;68. Tôi có khuynh hướng cư xử cứng rắn với những người không chịu chấp nhận một phương pháp hợp logic.<br><br>
+      <input id="item69" name="" type="checkbox" />&nbsp;69. Tôi luôn nghĩ rằng lấy “mục đích biện minh cho phương tiện”.<br><br>
+      <input id="item70" name="" type="checkbox" />&nbsp;70. Tôi không ngại làm tổn thương người khác, miễn sao được việc.<br><br>
+      <input id="item71" name="" type="checkbox" />&nbsp;71. Tôi không chịu được việc trịnh trọng khi phải đặt ra mục tiêu và kế hoạch cụ thể cho công việc.<br><br>
+      <input id="item72" name="" type="checkbox" />&nbsp;72. Tôi thường trở thành nhân vật trung tâm của môt bữa tiệc.<br><br>
+      <input id="item73" name="" type="checkbox" />&nbsp;73. Tôi sẵn sàng làm mọi thứ để đạt được mục đích.<br><br>
+      <input id="item74" name="" type="checkbox" />&nbsp;74. Tôi rất dễ chán các công việc đòi hỏi phải tỉ mỉ.<br><br>
+      <input id="item75" name="" type="checkbox" />&nbsp;75. Tôi luôn muốn tìm ra các tính chất căn bản, các nguyên lý, và tìm cách giải thích mọi sự vật, hiện tượng.<br><br>
+      <input id="item76" name="" type="checkbox" />&nbsp;76. Tôi luôn muốn biết người khác đang nghĩ gì.<br><br>
+      <input id="item77" name="" type="checkbox" />&nbsp;77. Tôi muốn các buổi họp được tiến hành có phương pháp, đúng như chương trình đã định.<br><br>
+      <input id="item78" name="" type="checkbox" />&nbsp;78. Tôi luôn tránh các chủ đề có tính chủ quan hoặc kém rõ ràng.<br><br>
+      <input id="item79" name="" type="checkbox" />&nbsp;79. Tôi thích kịch tính và sự kích thích của một cuộc khủng hoảng.<br><br>
+      <input id="item80" name="" type="checkbox" />&nbsp;80. Mọi người chung quanh thường cho rằng tôi là người vô cảm.</td>
+      <hr>
+  </div>
+ 
+  <div class="tab">
+    <h1>B. BẢNG KẾT QUẢ </h1>
+      <table class="result_table" border="1" style="text-align: center; width:100%;margin-left: auto;margin-right: auto;">
+      <tbody>
+      <tr style="background-color:#F37821; color:white">
+      <td>Người hoạt động (Doer)</td>
+      <td>Nhà lý luận (Analyser)</td>
+      <td>Nhà tư duy thực tế (Realist)</td>
+      <td>Nhà suy ngẫm (Thinker)</td>
+      </tr>
+      <tr>
+      <td>
+      <div id="doer" style="color: orange; text-align: center; font-size: 3cm;"></div></td>
+      <td>
+      <div id="analyser" style="color: blue; text-align: center; font-size: 3cm;"></div></td>
+      <td>
+      <div id="realist" style="color: red; text-align: center; font-size: 3cm;"></div></td>
+      <td>
+      <div id="thinker" style="color: aquamarine; text-align: center; font-size: 3cm;"></div></td>
+      </tr>
+      </tbody>
+      
+        <div class="mauticform-error" id="mauticform_tracnghiemphongcachhoc_error"></div>
+        <div class="mauticform-message" id="mauticform_tracnghiemphongcachhoc_message"></div>
+        <div class="mauticform-innerform">
+
+            
+          
+       
+
+        <input type="hidden" name="mauticform[formId]" id="mauticform_tracnghiemphongcachhoc_id" value="87">
+        <input type="hidden" name="mauticform[return]" id="mauticform_tracnghiemphongcachhoc_return" value="">
+        <input type="hidden" name="mauticform[formName]" id="mauticform_tracnghiemphongcachhoc_name" value="tracnghiemphongcachhoc">
+      </tfoot>
+      </table>
+      <h1 style="color:#010A37">Bạn Vui Lòng Để Lại Thông Tin Để Nhận Được Tư Vấn Kết Quả Nhé.</h1>
+      <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1" style=" display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;width: 100%;">
+
+        <div id="mauticform_tracnghiemphongcachhoc_ho_ten" data-validate="ho_ten" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required">
+            <label id="mauticform_label_tracnghiemphongcachhoc_ho_ten" for="mauticform_input_tracnghiemphongcachhoc_ho_ten" class="mauticform-label">Họ tên</label>
+            <input id="mauticform_input_tracnghiemphongcachhoc_ho_ten  " name="mauticform[ho_ten]" value="" class="mauticform-input" type="text">
+            <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+        </div>
+
+        <div id="mauticform_tracnghiemphongcachhoc_email" data-validate="email" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-2 mauticform-required fullwidth">
+            <label id="mauticform_label_tracnghiemphongcachhoc_email" for="mauticform_input_tracnghiemphongcachhoc_email" class="mauticform-label">Email</label>
+            <input id="mauticform_input_tracnghiemphongcachhoc_email" name="mauticform[email]" value="" class="mauticform-input" type="email">
+            <span class="mauticform-errormsg" style="display: none;">This is required.</span>
+        </div>
+
+            <input id="mauticform_input_tracnghiemphongcachhoc_circle" name="mauticform[circle]" value="" class="mauticform-hidden" type="hidden">
+            <input id="mauticform_input_tracnghiemphongcachhoc_square" name="mauticform[square]" value="" class="mauticform-hidden" type="hidden">
+            <input id="mauticform_input_tracnghiemphongcachhoc_triangle" name="mauticform[triangle]" value="" class="mauticform-hidden" type="hidden">
+            <input id="mauticform_input_tracnghiemphongcachhoc_thunder" name="mauticform[thunder]" value="" class="mauticform-hidden" type="hidden">
+        <div id="mauticform_tracnghiemphongcachhoc_so_dien_thoai" class="mauticform-row mauticform-tel mauticform-field-7 fullwidth">
+            <label id="mauticform_label_tracnghiemphongcachhoc_so_dien_thoai" for="mauticform_input_tracnghiemphongcachhoc_so_dien_thoai" class="mauticform-label">Số Điện Thoại</label>
+            <input id="mauticform_input_tracnghiemphongcachhoc_so_dien_thoai" name="mauticform[so_dien_thoai]" value="" class="mauticform-input" type="tel">
+            <span class="mauticform-errormsg" style="display: none;"></span>
+        </div>
+
+        <div id="mauticform_tracnghiemphongcachhoc_ten_cong_ty" class="mauticform-row mauticform-text mauticform-field-8 fullwidth">
+            <label id="mauticform_label_tracnghiemphongcachhoc_ten_cong_ty" for="mauticform_input_tracnghiemphongcachhoc_ten_cong_ty" class="mauticform-label">Tên Công Ty</label>
+            <input id="mauticform_input_tracnghiemphongcachhoc_ten_cong_ty" name="mauticform[ten_cong_ty]" value="" class="mauticform-input" type="text">
+            <span class="mauticform-errormsg" style="display: none;"></span>
+        </div>
+        <br>
+        <div id="mauticform_tracnghiemphongcachhoc_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-9 fullwidth">
+            <button type="submit" name="mauticform[submit]" id="mauticform_input_tracnghiemphongcachhoc_submit" value="" class="mauticform-button btn btn-default">Kết Thúc</button>
+        </div>
+        </div>
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Trở Về</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)"> Tiếp Tục</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+  
+</form>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").style.display = "none";;
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Tiếp Tục";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("mauticform_tracnghiemphongcachhoc").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+<script>
+      
+      
+      
+  var countChecked = function() {
+     
+
+  var n = $( "input#item2:checked,input#item4:checked,input#item6:checked,input#item10:checked,input#item17:checked,input#item23:checked,input#item24:checked,input#item32:checked,input#item34:checked,input#item38:checked,input#item40:checked,input#item43:checked,input#item45:checked,input#item48:checked,input#item58:checked,input#item64:checked,input#item71:checked,input#item72:checked,input#item74:checked,input#item79:checked" ).length;
+  var n1 = $("input#item1:checked,input#item3:checked,input#item8:checked,input#item12:checked,input#item14:checked,input#item18:checked,input#item20:checked,input#item22:checked,input#item26:checked,input#item30:checked,input#item42:checked,input#item47:checked,input#item51:checked,input#item57:checked,input#item61:checked,input#item63:checked,input#item68:checked,input#item75:checked,input#item77:checked,input#item78:checked").length;
+  var n2 = $("input#item5:checked,input#item9:checked,input#item11:checked,input#item19:checked,input#item21:checked,input#item27:checked,input#item35:checked,input#item37:checked,input#item44:checked,input#item49:checked,input#item50:checked,input#item53:checked,input#item54:checked,input#item56:checked,input#item59:checked,input#item65:checked,input#item69:checked,input#item70:checked,input#item73:checked,input#item80:checked").length;
+  var n3 = $("input#item7:checked,input#item13:checked,input#item15:checked,input#item16:checked,input#item25:checked,input#item28:checked,input#item29:checked,input#item31:checked,input#item33:checked,input#item36:checked,input#item39:checked,input#item41:checked,input#item46:checked,input#item52:checked,input#item55:checked,input#item60:checked,input#item62:checked,input#item66:checked,input#item67:checked,input#item76:checked").length;
+  $( "#doer" ).text( n );
+  $( "#analyser" ).text( n1  );
+  $( "#realist" ).text( n2  );
+  $( "#thinker" ).text( n3 );
+
+    
+
+    var rs
+    
+            if (n <= 3 && n >0) { rs="E.THẤP"}
+            if (n <= 6 && n >= 4) {rs="D.DƯỚI TRUNG BÌNH"}
+            if (n <= 10 && n >= 7) {rs="C.TRUNG BÌNH"}
+            if (n<=12 && n >= 11){rs="B.TRÊN TRUNG BÌNH"}
+            if (n<=20 && n >= 13){rs="A.CAO"}
+            //rs1
+    var rs1
+    
+            if (n1 <= 8 && n1 > 0) { rs1="E.THẤP"}
+            if (n1 <= 11 && n1 >= 9) {rs1="D.DƯỚI TRUNG BÌNH"}
+            if (n1 <= 14 && n1 >=12) {rs1="C.TRUNG BÌNH"}
+            if (n1 <= 17 && n1 >= 15){rs1="B.TRÊN TRUNG BÌNH"}
+            if (n1 <= 20 && n1 >= 18){rs1="A.CAO"}
+            //rs2
+            var rs2
+
+
+            if (n2 <= 7 && n2 > 0) { rs2="E.THẤP"}
+            if (n2 <= 10 && n2 >= 8) {rs2="D.DƯỚI TRUNG BÌNH"}
+            if (n2 <= 13 && n2 >= 11) {rs2="C.TRUNG BÌNH"}
+            if (n2 <= 15 && n2 >= 14){rs2="B.TRÊN TRUNG BÌNH"}
+            if (n2 <= 20 && n2 >= 16){rs2="A.CAO"}
+            //rs3
+       var rs3
+            if (n3 <= 8 && n3 > 0) { rs3="E.THẤP"}
+            if (n3 <= 11 && n3 >= 9) {rs3="D.DƯỚI TRUNG BÌNH"}
+            if (n3 <= 14 && n3 >= 12) {rs3="C.TRUNG BÌNH"}
+            if (n3 <= 16 && n3 >= 15){rs3="B.TRÊN TRUNG BÌNH"}
+            if (n3 <= 20 && n3 >= 17){rs3="A.CAO"}
+
+           
+  document.getElementById("mauticform_input_tracnghiemphongcachhoc_circle").value=rs; 
+  document.getElementById("mauticform_input_tracnghiemphongcachhoc_square").value=rs1; 
+  document.getElementById("mauticform_input_tracnghiemphongcachhoc_triangle").value=rs2; 
+  document.getElementById("mauticform_input_tracnghiemphongcachhoc_thunder").value=rs3; 
+  };
+  countChecked();
+
+$( "input[type=checkbox]" ).on( "click", countChecked );
+
+
+</script>
+<script type="text/javascript">
+  /** This section is only needed once per page if manually copying **/
+  if (typeof MauticSDKLoaded == 'undefined') {
+      var MauticSDKLoaded = true;
+      var head            = document.getElementsByTagName('head')[0];
+      var script          = document.createElement('script');
+      script.type         = 'text/javascript';
+      script.src          = 'https://happyclick.vn/media/js/mautic-form.js';
+      script.onload       = function() {
+          MauticSDK.onLoad();
+      };
+      head.appendChild(script);
+      var MauticDomain = 'https://happyclick.vn';
+      var MauticLang   = {
+          'submittingMessage': "Please wait..."
+      }
+  }else if (typeof MauticSDK != 'undefined') {
+      MauticSDK.onLoad();
+  }
+</script>
+
+
+</body>
+</html>
